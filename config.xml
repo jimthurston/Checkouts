@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns		= "http://www.w3.org/ns/widgets"
+	xmlns:gap	= "http://phonegap.com/ns/1.0"
+	id		= "com.jimthurston.checkouts"
+	version 	= "0.0.1">
+
+	<name>Checkouts</name>
+
+	<description>
+		Practice your darts checkouts with this game improvement app.
+	</description>
+
+	<author href="http://www.jimthurston.com"
+		email="jimthurston@gmail.com">
+		Jim Thurston
+	</author>
+
+	<icon src="icon.png" gap:role="default" />
+
+	<feature name="http://api.phonegap.com/1.0/geolocation"/>
+	<feature name="http://api.phonegap.com/1.0/network"/>
+
+	<preference name="orientation" value="portrait" />
+</widget>
