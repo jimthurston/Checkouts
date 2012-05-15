@@ -55,26 +55,26 @@ body {
 	    and then override this based on the element id */
 	display: none;
 }
-/* our three views */
-#welcome {
+/* our views */
+#welcome
+{
   display: block;  
 }
 
-#map { 
-  text-shadow: 0 1px 0 #fff;
+#settings
+{
 }
 
-  .map_image {
-    margin: auto;
-    height: 250px;
-    width: 250px;
-    border: 1px solid #aaa;
-    -webkit-border-radius: 20px;
-    border-radius: 20px;
-    overflow: hidden;
-  }
+#stats
+{
+}
 
-#settings {
+#gamestart
+{
+}
+
+#game
+{
 }
 
   legend {
