@@ -15,6 +15,12 @@ run
 		// a little inline controller
 		when('#welcome');
 		
+		when('#stats');
+		
+		when('#gamestart');
+		
+		when('#game');
+		
 		when
 		(
 			'#settings',
