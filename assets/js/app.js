@@ -4,6 +4,7 @@
 run(function () {
     // immediately invoked on first run
     var init = (function () {
+    	alert('hi');
         }
     })();
     
