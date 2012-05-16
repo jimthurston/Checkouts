@@ -25,9 +25,10 @@
 		</div>
 
 		<div id="startgame" class="view">
-		  Choose difficulty range:
+		  Choose difficulty range
 		  <form id="startgame_form">
 			<fieldset>
+Min: 
 				<input type="radio" name="minDifficulty" value="1" checked>
 				<input type="radio" name="minDifficulty" value="2">
 				<input type="radio" name="minDifficulty" value="3">
@@ -35,7 +36,8 @@
 				<input type="radio" name="minDifficulty" value="5">
 				<input type="radio" name="minDifficulty" value="6">
 				<input type="radio" name="minDifficulty" value="7">
-				 to 
+				<br />
+Max: 
 				<input type="radio" name="maxDifficulty" value="1">
 				<input type="radio" name="maxDifficulty" value="2">
 				<input type="radio" name="maxDifficulty" value="3">
@@ -44,12 +46,29 @@
 				<input type="radio" name="maxDifficulty" value="6">
 				<input type="radio" name="maxDifficulty" value="7" checked>
 			</fieldset>
+
+Choose game length
+<fieldset>
+<input type="radio" name="gameLength" value="10">
+<input type="radio" name="gameLength" value="20" checked>
+<input type="radio" name="gameLength" value="30">
+<input type="radio" name="gameLength" value="40">
+<input type="radio" name="gameLength" value="50">
+</fieldset>
+
 		  <button id="game_button">Start Game</button>
 		  </form>
 
 		  <div class="app_button" id="welcome_button">Back</div>
 		</div>
 		
+<div id="game" class="view">
+    Game<br />
+    Difficulty from <input type="label" name="lblMinDifficulty"> to <input type="label" name="lblMaxDifficulty">.<br />
+    Game length <input type="label" name="lblGameLength">.<br />
+    
+</div>
+
 		<div id="stats" class="view">
 			Stats here
 			<button id="back_button">Back</div>
