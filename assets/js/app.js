@@ -50,11 +50,13 @@ run(function () {
     });
 	*/
     when('#save', function () {
+	/*
         store.save({
             key:'config',
             map:ui('map'),
             zoom:ui('zoom')
         });
+	*/
         display('#welcome');
     });
 });
