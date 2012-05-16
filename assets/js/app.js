@@ -15,6 +15,7 @@ run(function () {
     
     // a little inline controller
     when('#welcome');
+	when('#startgame');
     when('#settings', function() {
 		// load settings from store and make sure we persist radio buttons.
 		store.get('config', function(saved) {
