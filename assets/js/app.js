@@ -62,7 +62,10 @@ run(function () {
 	*/
         display('#welcome');
     });
-	when('#back', function () {
+    when('#back', function () {
+        display('#welcome');
+    });
+    when('#quit', function () {
         display('#welcome');
     });
 });
