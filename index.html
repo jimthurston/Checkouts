@@ -25,7 +25,16 @@
 		</div>
 
 		<div id="startgame" class="view">
-		  New Game!
+		  Choose difficulty range:
+		  <form id="startgame_form">
+			<fieldset>
+				<input type="range" name="minDifficulty" min="1" max="7">
+				 to 
+				<input type="range" name="maxDifficulty" min="1" max="7">
+			</fieldset>
+		  </form>
+		  
+		  <button id="game_button">Start Game</button>
 		  <div class="app_button" id="welcome_button">Back</div>
 		</div>
 		
