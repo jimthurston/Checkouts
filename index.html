@@ -28,13 +28,25 @@
 		  Choose difficulty range:
 		  <form id="startgame_form">
 			<fieldset>
-				<input type="range" name="minDifficulty" min="1" max="7">
+				<input type="radio" name="minDifficulty" value="1" checked>
+				<input type="radio" name="minDifficulty" value="2">
+				<input type="radio" name="minDifficulty" value="3">
+				<input type="radio" name="minDifficulty" value="4">
+				<input type="radio" name="minDifficulty" value="5">
+				<input type="radio" name="minDifficulty" value="6">
+				<input type="radio" name="minDifficulty" value="7">
 				 to 
-				<input type="range" name="maxDifficulty" min="1" max="7">
+				<input type="radio" name="maxDifficulty" value="1">
+				<input type="radio" name="maxDifficulty" value="2">
+				<input type="radio" name="maxDifficulty" value="3">
+				<input type="radio" name="maxDifficulty" value="4">
+				<input type="radio" name="maxDifficulty" value="5">
+				<input type="radio" name="maxDifficulty" value="6">
+				<input type="radio" name="maxDifficulty" value="7" checked>
 			</fieldset>
-		  </form>
-		  
 		  <button id="game_button">Start Game</button>
+		  </form>
+
 		  <div class="app_button" id="welcome_button">Back</div>
 		</div>
 		
@@ -44,26 +56,9 @@
 		</div>
 
 		<div id="settings" class="view">
-			<!--
 		  <form id="settings_form">
-		    <fieldset>
-		      <legend>Map Type</legend>
-			  <input type="radio" name="map" value="roadmap" checked>Road Map<br/>
-		      <input type="radio" name="map" value="satellite">Satellite<br/>
-		      <input type="radio" name="map" value="terrain">Terrain<br/>
-		      <input type="radio" name="map" value="hybrid">Hybrid<br/>
-		    </fieldset>
-		    <fieldset>
-		      <legend>Zoom Level</legend>
-  		      <input type="radio" name="zoom" value="10">Super Far<br/>
-  		      <input type="radio" name="zoom" value="12">Far<br/>
-  		      <input type="radio" name="zoom" value="15" checked>Normal<br/>
-  		      <input type="radio" name="zoom" value="18">Close<br/>
-  		      <input type="radio" name="zoom" value="20">Super Close<br/>
-  		     </fieldset>
-			 -->
 		      <button id="save_button">Save</button>
-	      </form>
+	          </form>
 		</div>
 
 	</body>
