@@ -28,6 +28,7 @@ run(function () {
 			}
 		});
 	});
+	/*
     when('#map', function () {
         store.get('config', function (saved) {
             // construct a gmap str
@@ -47,6 +48,7 @@ run(function () {
             });
         });
     });
+	*/
     when('#save', function () {
         store.save({
             key:'config',
