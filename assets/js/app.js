@@ -15,8 +15,9 @@ run(function () {
     
     // a little inline controller
     when('#welcome');
-	when('#startgame');
-	when('#stats');
+    when('#startgame');
+    when('#stats');
+    when('#game');
     when('#settings', function() {
 		// load settings from store and make sure we persist radio buttons.
 		store.get('config', function(saved) {
