@@ -45,7 +45,7 @@ body {
 }
 
 #back_button {
-  background: grey;
+  //background: grey;
 }
  
 .view {
@@ -58,7 +58,7 @@ body {
 /* our views */
 #welcome
 {
-  //display: block;  
+  display: block;  
 }
 
 #newgame
