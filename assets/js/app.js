@@ -11,7 +11,6 @@ run(function() {
     when('#newgame');
 	when('#stats');
 	when('#settings');
-	
 	when('#game', function()
 	{
 		// load game config from store and make sure we persist radio buttons.
@@ -30,7 +29,6 @@ run(function() {
 		});
 	}
 	);
-
     when('#startgame', function()
 	{
 		// save game configuration - this will then become the default
@@ -42,18 +40,16 @@ run(function() {
 		});
 	}
 	);
-
     when('#save', function()
 	{
 		// save settings here
 		display('#welcome');
     });
-
     when('#back', function()
 	{
+		alert('back clicked');
         display('#welcome');
     });
-
     when('#quit', function()
 	{
         display('#welcome');
