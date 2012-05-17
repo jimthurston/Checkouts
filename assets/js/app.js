@@ -38,7 +38,8 @@ run(function () {
 				}
 			}
 		});
-	};
+	}
+	);
 	
     when('#settings', function() {
 
