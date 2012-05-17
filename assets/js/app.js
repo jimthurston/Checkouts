@@ -11,6 +11,7 @@ run(function() {
     when('#newgame');
 	when('#stats');
 	when('#settings');
+	
 	when('#game', function()
 	{
 		alert('trying to get game settings...');
@@ -30,6 +31,7 @@ run(function() {
 		});
 	}
 	);
+	
     when('#startgame', function()
 	{
 		alert('starting new game...');
@@ -42,16 +44,19 @@ run(function() {
 		});
 	}
 	);
+	
     when('#save', function()
 	{
 		// save settings here
 		display('#welcome');
     });
+	
     when('#back', function()
 	{
 		alert('back clicked');
         display('#welcome');
     });
+	
     when('#quit', function()
 	{
         display('#welcome');
