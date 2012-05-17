@@ -77,17 +77,17 @@ body {
 {
 }
 
-  legend {
-    font-weight: bold;
-    text-shadow: 0 1px 0 #fff;
-  }
+legend {
+font-weight: bold;
+text-shadow: 0 1px 0 #fff;
+}
 
-  fieldset {
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-  }
-  
-  input {
-    margin-bottom: 8px;
-  }
+fieldset {
+margin-bottom: 20px;
+border: 1px solid #ccc;
+border-radius: 8px;
+}
+
+input {
+margin-bottom: 8px;
+}
