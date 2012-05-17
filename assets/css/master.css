@@ -58,7 +58,7 @@ body {
 /* our views */
 #welcome
 {
-  display: block;  
+  //display: block;  
 }
 
 #newgame

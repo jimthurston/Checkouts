@@ -12,7 +12,7 @@ run(function () {
 	when('#stats');
 	when('#settings');
 	
-	when('#game', function()
+	when('#game', function ()
 	{
 		// load game config from store and make sure we persist radio buttons.
 		store.get('gameSettings', function(saved) {
@@ -33,7 +33,7 @@ run(function () {
 	
 
 
-    when('#startgame', function()
+    when('#startgame', function ()
 	{
 		// save game configuration - this will then become the default
 		store.save({
