@@ -8,9 +8,9 @@ run(function () {
     
     // a little inline controller
     when('#welcome');
-    when('#startgame');
+    when('#newgame');
     when('#stats');
-    when('#game', function()
+    when('#startgame', function()
 	{
 		// save game configuration - this will then become the default
 		store.save({
@@ -19,7 +19,11 @@ run(function () {
 			maxDifficulty:ui('maxDifficulty'),
 			gameLength:ui('gameLength')
 		});
-		
+	}
+	);
+	
+	when('#game', function()
+	{
 		// load game config from store and make sure we persist radio buttons.
 		store.get('gameSettings', function(saved) {
 			if (saved) {
@@ -34,8 +38,7 @@ run(function () {
 				}
 			}
 		});
-	}
-	);
+	};
 	
     when('#settings', function() {
 
