@@ -9,19 +9,6 @@ run(function () {
     // a little inline controller
     when('#welcome');
     when('#newgame');
-    when('#stats');
-	
-    when('#startgame', function()
-	{
-		// save game configuration - this will then become the default
-		store.save({
-			key:'gameSettings',
-			minDifficulty:ui('minDifficulty'),
-			maxDifficulty:ui('maxDifficulty'),
-			gameLength:ui('gameLength')
-		});
-	}
-	);
 	
 	when('#game', function()
 	{
@@ -42,7 +29,20 @@ run(function () {
 	}
 	);
 	
-    when('#settings');
+    when('#stats');
+	when('#settings');
+
+    when('#startgame', function()
+	{
+		// save game configuration - this will then become the default
+		store.save({
+			key:'gameSettings',
+			minDifficulty:ui('minDifficulty'),
+			maxDifficulty:ui('maxDifficulty'),
+			gameLength:ui('gameLength')
+		});
+	}
+	);
 	
     when('#save', function ()
 	{

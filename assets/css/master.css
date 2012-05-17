@@ -61,7 +61,11 @@ body {
   display: block;  
 }
 
-#settings
+#newgame
+{
+}
+
+#game
 {
 }
 
@@ -69,11 +73,7 @@ body {
 {
 }
 
-#gamestart
-{
-}
-
-#game
+#settings
 {
 }
 
