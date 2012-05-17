@@ -4,12 +4,13 @@
 run(function () {
     // immediately invoked on first run
     var init = (function () {
-	alert('hi!');
     })();
     
     // a little inline controller
     when('#welcome');
     when('#newgame');
+	when('#stats');
+	when('#settings');
 	
 	when('#game', function()
 	{
@@ -30,8 +31,7 @@ run(function () {
 	}
 	);
 	
-    when('#stats');
-	when('#settings');
+
 
     when('#startgame', function()
 	{
