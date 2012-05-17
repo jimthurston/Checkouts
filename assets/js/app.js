@@ -10,6 +10,7 @@ run(function () {
     when('#welcome');
     when('#newgame');
     when('#stats');
+	
     when('#startgame', function()
 	{
 		// save game configuration - this will then become the default
@@ -41,19 +42,21 @@ run(function () {
 	}
 	);
 	
-    when('#settings', function() {
-
-	});
+    when('#settings');
 	
-    when('#save', function () {
+    when('#save', function ()
+	{
+		// save settings here
 		display('#welcome');
     });
 	
-    when('#back', function () {
+    when('#back', function ()
+	{
         display('#welcome');
     });
 	
-    when('#quit', function () {
+    when('#quit', function ()
+	{
         display('#welcome');
     });
 });
