@@ -36,12 +36,14 @@ run(function() {
 	{
 		alert('starting new game...');
 		// save game configuration - this will then become the default
+		/*
 		store.save({
 			key:'gameSettings',
 			minDifficulty:ui('minDifficulty'),
 			maxDifficulty:ui('maxDifficulty'),
 			gameLength:ui('gameLength')
 		});
+		*/
 	}
 	);
 	
