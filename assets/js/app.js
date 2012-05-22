@@ -12,11 +12,12 @@ run(function() {
 	when('#stats');
 	when('#settings');
 	
+	/*
 	when('#game', function()
 	{
 		alert("trying to get game settings...");
 		// load game config from store and make sure we persist radio buttons.
-		/*
+		
 		store.get('gameSettings', function(saved) {
 			if (saved) {
 				if (saved.minDifficulty) {
@@ -30,24 +31,27 @@ run(function() {
 				}
 			}
 		});
-		*/
+		
 	}
 	);
+	*/
 	
+	/*
     when('#startgame', function()
 	{
 		alert("starting new game...");
 		// save game configuration - this will then become the default
-		/*
+		
 		store.save({
 			key:'gameSettings',
 			minDifficulty:ui('minDifficulty'),
 			maxDifficulty:ui('maxDifficulty'),
 			gameLength:ui('gameLength')
 		});
-		*/
+		
 	}
 	);
+	*/
 	
     when('#save', function()
 	{
