@@ -51,15 +51,15 @@ run(function() {
 				//alert("saved! apparently");
 				if (saved.minDifficulty) {
 					alert("minDifficulty: " + saved.minDifficulty);
-					x$('input[name=minDifficulty][value=' + saved.minDifficulty + ']').attr('checked',true);
+					//x$('input[name=minDifficulty][value=' + saved.minDifficulty + ']').attr('checked',true);
 				}
 				if (saved.maxDifficulty) {
 					alert("found maxDifficulty");
-					x$('input[name=maxDifficulty][value="' + saved.maxDifficulty + '"]').attr('checked',true);
+					//x$('input[name=maxDifficulty][value="' + saved.maxDifficulty + '"]').attr('checked',true);
 				}
 				if (saved.gameLength) {
 					alert("found gameLength");
-					x$('input[name=gameLength][value="' + saved.gameLength + '"]').attr('checked',true);
+					//x$('input[name=gameLength][value="' + saved.gameLength + '"]').attr('checked',true);
 				}
 			}
 		});
