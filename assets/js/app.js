@@ -48,9 +48,9 @@ run(function() {
 		{
 			if (saved)
 			{
-				alert("saved! apparently");
+				//alert("saved! apparently");
 				if (saved.minDifficulty) {
-					alert("found minDifficulty");
+					alert("minDifficulty: " + saved.minDifficulty);
 					x$('input[name=minDifficulty][value=' + saved.minDifficulty + ']').attr('checked',true);
 				}
 				if (saved.maxDifficulty) {
