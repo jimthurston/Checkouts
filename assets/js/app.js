@@ -30,7 +30,6 @@ run(function() {
 	
 	when('#startgame', function()
 	{
-		alert("starting new game...");
 		// save game configuration - this will then become the default
 		store.save({
 			key:'gameSettings',
@@ -38,11 +37,10 @@ run(function() {
 			maxDifficulty:ui('maxDifficulty'),
 			gameLength:ui('gameLength')
 		});
-		alert("game settings saved");
 		display('#game');
 		
 		// now let's load the saved data into the game view
-		alert("trying to get game settings...");
+
 		// load game config from store and make sure we persist radio buttons.
 		
 		
@@ -52,12 +50,15 @@ run(function() {
 			{
 				alert("saved! apparently");
 				if (saved.minDifficulty) {
+					alert("found minDifficulty");
 					x$('input[name=minDifficulty][value=' + saved.minDifficulty + ']').attr('checked',true);
 				}
 				if (saved.maxDifficulty) {
+					alert("found maxDifficulty");
 					x$('input[name=maxDifficulty][value="' + saved.maxDifficulty + '"]').attr('checked',true);
 				}
 				if (saved.gameLength) {
+					alert("found gameLength");
 					x$('input[name=gameLength][value="' + saved.gameLength + '"]').attr('checked',true);
 				}
 			}
