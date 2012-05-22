@@ -40,28 +40,21 @@ run(function() {
 		display('#game');
 		
 		// now let's load the saved data into the game view
-
-		// load game config from store and make sure we persist radio buttons.
-		
-		
 		store.get('gameSettings', function(saved)
 		{
 			if (saved)
 			{
-				//alert("saved! apparently");
-				if (saved.minDifficulty) {
-					alert("minDifficulty: " + saved.minDifficulty);
-					alert(x$);
-					x$('input[id=lblMinDifficulty][value=' + saved.minDifficulty + ']').attr('checked',true);
-				}
-				if (saved.maxDifficulty) {
-					alert("maxDifficulty: " + saved.maxDifficulty);
-					x$('input[id=lblMaxDifficulty][value="' + saved.maxDifficulty + '"]').attr('checked',true);
-				}
-				if (saved.gameLength) {
-					alert("gameLength: " + saved.gameLength);
-					x$('input[id=lblGameLength][value="' + saved.gameLength + '"]').attr('checked',true);
-				}
+				alert("minDifficulty: " + saved.minDifficulty);
+				alert("maxDifficulty: " + saved.maxDifficulty);
+				alert("gameLength: " + saved.gameLength);
+				
+				//let's get a target
+				int target = 12;
+				x$('input[id=txtTarget]').value = target;
+			}
+			else
+			{
+				x$('input[id=txtTarget]').value = "Error retrieving settings";
 			}
 		});
 		
