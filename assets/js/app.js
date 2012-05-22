@@ -52,15 +52,15 @@ run(function() {
 				if (saved.minDifficulty) {
 					alert("minDifficulty: " + saved.minDifficulty);
 					alert(x$);
-					//x$('input[name=minDifficulty][value=' + saved.minDifficulty + ']').attr('checked',true);
+					x$('input[name=lblMinDifficulty][value=' + saved.minDifficulty + ']').attr('checked',true);
 				}
 				if (saved.maxDifficulty) {
 					alert("maxDifficulty: " + saved.maxDifficulty);
-					//x$('input[name=maxDifficulty][value="' + saved.maxDifficulty + '"]').attr('checked',true);
+					x$('input[name=lblMaxDifficulty][value="' + saved.maxDifficulty + '"]').attr('checked',true);
 				}
 				if (saved.gameLength) {
 					alert("gameLength: " + saved.gameLength);
-					//x$('input[name=gameLength][value="' + saved.gameLength + '"]').attr('checked',true);
+					x$('input[name=lblGameLength][value="' + saved.gameLength + '"]').attr('checked',true);
 				}
 			}
 		});
