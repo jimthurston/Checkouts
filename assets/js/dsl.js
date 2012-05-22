@@ -13,10 +13,17 @@ var run = function(application) {
 , store = new Lawnchair({adaptor:'dom'})
 
 // shows id passed
-, display = function(id) {
-    x$(["#welcome", "#newgame", "#game", "#stats", "#settings"]).each(function(e, i) {
-        var display = '#' + x$(e)[0].id === id ? 'block' : 'none';
-        x$(e).css({ 'display':display })
+, display = function(id)
+{
+    x$(["#welcome", "#newgame", "#game", "#stats", "#settings", "#welcome_button"]).each(function(e, i)
+	{
+		if (x$(id) == "#welcome_button")
+			x$(e).css({ 'display':'none' })
+		else
+		{
+			var display = '#' + x$(e)[0].id === id ? 'block' : 'none';
+			x$(e).css({ 'display':display })
+		}
     });
 }
 
