@@ -45,7 +45,7 @@ run(function() {
 		alert("trying to get game settings...");
 		// load game config from store and make sure we persist radio buttons.
 		
-		/*
+		
 		store.get('gameSettings', function(saved) {
 			if (saved) {
 				if (saved.minDifficulty) {
@@ -59,7 +59,7 @@ run(function() {
 				}
 			}
 		});
-		*/
+		
 	}
 	);
 	
