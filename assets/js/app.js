@@ -60,11 +60,13 @@ run(function() {
 		display('#welcome');
     });
 	
+	/*
     when('#back', function()
 	{
 		alert("back clicked");
         display('#welcome');
     });
+	*/
 	
     when('#quit', function()
 	{
