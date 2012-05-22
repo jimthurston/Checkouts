@@ -15,10 +15,10 @@ var run = function(application) {
 // shows id passed
 , display = function(id)
 {
-    x$(["#welcome", "#newgame", "#game", "#stats", "#settings", "#welcome_button"]).each(function(e, i)
+    x$(["#welcome", "#newgame", "#game", "#stats", "#settings"]).each(function(e, i)
 	{
-		if (x$(id) == "#welcome_button")
-			x$(e).css({ 'display':'none' })
+		if (x$(id) == "#welcome")
+			"#welcome_button"(e).css({ 'display':'none' })
 		else
 		{
 			var display = '#' + x$(e)[0].id === id ? 'block' : 'none';
