@@ -12,6 +12,39 @@ run(function() {
 	when('#stats');
 	when('#settings');
 	
+	when('#save', function()
+	{
+		// save settings here
+		display('#welcome');
+    });
+	
+	when('#statsok', function()
+	{
+		display('#welcome');
+    });
+	
+    when('#quit', function()
+	{
+        display('#welcome');
+    });
+	
+	when('#startgame', function()
+	{
+		alert("starting new game...");
+		// save game configuration - this will then become the default
+		
+		store.save({
+			key:'gameSettings',
+			minDifficulty:ui('minDifficulty'),
+			maxDifficulty:ui('maxDifficulty'),
+			gameLength:ui('gameLength')
+		});
+		alert("game settings saved");
+		display('#game');
+	}
+	);
+	
+	
 	/*
 	when('#game', function()
 	{
@@ -37,45 +70,8 @@ run(function() {
 	*/
 	
 	
-    when('#startgame', function()
-	{
-		alert("starting new game...");
-		// save game configuration - this will then become the default
-		/*
-		store.save({
-			key:'gameSettings',
-			minDifficulty:ui('minDifficulty'),
-			maxDifficulty:ui('maxDifficulty'),
-			gameLength:ui('gameLength')
-		});
-		*/
-		display('#game');
-	}
-	);
+
 	
 	
-    when('#save', function()
-	{
-		// save settings here
-		display('#welcome');
-    });
-	
-	when('#statsok', function()
-	{
-		// save settings here
-		display('#welcome');
-    });
-	
-	/*
-    when('#back', function()
-	{
-		alert("back clicked");
-        display('#welcome');
-    });
-	*/
-	
-    when('#quit', function()
-	{
-        display('#welcome');
-    });
+
 });
