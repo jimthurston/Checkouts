@@ -60,6 +60,12 @@ run(function() {
 		display('#welcome');
     });
 	
+	when('#statsok', function()
+	{
+		// save settings here
+		display('#welcome');
+    });
+	
 	/*
     when('#back', function()
 	{

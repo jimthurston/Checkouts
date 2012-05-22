@@ -17,13 +17,8 @@ var run = function(application) {
 {
     x$(["#welcome", "#newgame", "#game", "#stats", "#settings"]).each(function(e, i)
 	{
-		if (x$(id) == "#welcome")
-			"#welcome_button"(e).css({ 'display':'none' })
-		else
-		{
-			var display = '#' + x$(e)[0].id === id ? 'block' : 'none';
-			x$(e).css({ 'display':display })
-		}
+		var display = '#' + x$(e)[0].id === id ? 'block' : 'none';
+		x$(e).css({ 'display':display })
     });
 }
 
