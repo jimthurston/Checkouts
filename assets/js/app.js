@@ -46,8 +46,11 @@ run(function() {
 		// load game config from store and make sure we persist radio buttons.
 		
 		
-		store.get('gameSettings', function(saved) {
-			if (saved) {
+		store.get('gameSettings', function(saved)
+		{
+			if (saved)
+			{
+				alert("saved! apparently");
 				if (saved.minDifficulty) {
 					x$('input[name=minDifficulty][value=' + saved.minDifficulty + ']').attr('checked',true);
 				}
