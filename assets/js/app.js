@@ -54,11 +54,11 @@ run(function() {
 					//x$('input[name=minDifficulty][value=' + saved.minDifficulty + ']').attr('checked',true);
 				}
 				if (saved.maxDifficulty) {
-					alert("found maxDifficulty");
+					alert("maxDifficulty: " + saved.maxDifficulty);
 					//x$('input[name=maxDifficulty][value="' + saved.maxDifficulty + '"]').attr('checked',true);
 				}
 				if (saved.gameLength) {
-					alert("found gameLength");
+					alert("gameLength: " + saved.gameLength);
 					//x$('input[name=gameLength][value="' + saved.gameLength + '"]').attr('checked',true);
 				}
 			}
