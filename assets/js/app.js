@@ -49,25 +49,26 @@ run(function() {
 				alert("gameLength: " + saved.gameLength);
 				
 				//let's get a target
-				int target = 12;
-				x$('input[id=txtTarget]').value = target;
+				//int target = 12;
+				//x$('input[id=txtTarget]').value = target;
 			}
 			else
 			{
-				x$('input[id=txtTarget]').value = "Error retrieving settings";
+				alert("Error retrieving settings");
+				//x$('input[id=txtTarget]').value = "Error retrieving settings";
 			}
 		});
 		
 	}
 	);
 	
-	
+	/*
 	when('#game', function()
 	{
 		alert("trying to get game settings...");
 		// load game config from store and make sure we persist radio buttons.
 		
-		/*
+		
 		store.get('gameSettings', function(saved) {
 			if (saved) {
 				if (saved.minDifficulty) {
@@ -81,8 +82,8 @@ run(function() {
 				}
 			}
 		});
-		*/
+		
 	}
 	);
-
+	*/
 });
