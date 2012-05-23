@@ -45,20 +45,20 @@ run(function() {
 				gameLength:ui('gameLength')
 			});
 			
-			gameTurn();
+			gameTurn("new");
 		}
 	}
 	);
 	
 	when('#hit', function()
 	{
-		alert("Great shot!");
-		gameTurn();
+		
+		gameTurn("hit");
 	})
 	
 	when('#miss', function()
 	{
-		alert("Aw boo :(");
-		gameTurn();
+		
+		gameTurn("miss");
 	})
 });

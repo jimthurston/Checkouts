@@ -46,6 +46,16 @@ var run = function(application) {
 {
 	display('#game');
 	
+	if (x$('input[name=txtTurn]').attr('value') == "")
+	{
+		x$('input[name=txtTurn]').attr('value', "Turn 1");
+	}
+	else
+	{
+		var turn = x$('input[name=txtTurn]').attr('value').replace("Turn ", "");
+		x$('input[name=txtTurn]').attr('value', "Turn " + turn);
+	}
+	
 	// load the saved data into the game view
 	store.get('gameSettings', function(saved)
 	{
