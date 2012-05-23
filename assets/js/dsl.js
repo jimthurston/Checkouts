@@ -42,6 +42,51 @@ var run = function(application) {
     }
 }
 
+, gameTurn = function()
+{
+	display('#game');
+	
+	// load the saved data into the game view
+	store.get('gameSettings', function(saved)
+	{
+		if (saved)
+		{
+			// create a new array by combining all arrays of valid difficulties
+			var targetsForGame = new Array();
+			
+			if (saved.minDifficulty == 1)
+				targetsForGame = targetsForGame.concat(targetsLevel1);
+
+			if (saved.minDifficulty <= 2 && saved.maxDifficulty >= 2)
+				targetsForGame = targetsForGame.concat(targetsLevel2);
+
+			if (saved.minDifficulty <= 3 && saved.maxDifficulty >= 3)
+				targetsForGame = targetsForGame.concat(targetsLevel3);
+
+			if (saved.minDifficulty <= 4 && saved.maxDifficulty >= 4)
+				targetsForGame = targetsForGame.concat(targetsLevel4);
+
+			if (saved.minDifficulty <= 5 && saved.maxDifficulty >= 5)
+				targetsForGame = targetsForGame.concat(targetsLevel5);
+
+			if (saved.minDifficulty <= 6 && saved.maxDifficulty >= 6)
+				targetsForGame = targetsForGame.concat(targetsLevel6);
+
+			if (saved.maxDifficulty == 7)
+				targetsForGame = targetsForGame.concat(targetsLevel7);
+
+			//let's get a random target (zero-based for array indexing)
+			var targetIndex = Math.floor((Math.random() * targetsForGame.length));
+			var target = targetsForGame[targetIndex];
+			x$('input[name=txtTarget]').attr('value',target);
+		}
+		else
+		{
+			alert("Error retrieving settings");
+		}
+	});
+}
+
 // set up an array of targets for each difficulty level
 , targetsLevel1 = [4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40]
 , targetsLevel2 = [2, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60]
