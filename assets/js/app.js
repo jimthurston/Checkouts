@@ -49,13 +49,13 @@ run(function() {
 				//alert("gameLength: " + saved.gameLength);
 				
 				//let's get a target
+				alert(targetsLevel1);
 				var target = 12;
 				x$('input[name=txtTarget]').attr('value',target);
 			}
 			else
 			{
 				alert("Error retrieving settings");
-				//x$('input[id=txtTarget]').value = "Error retrieving settings";
 			}
 		});
 		
@@ -65,11 +65,13 @@ run(function() {
 	when('#hit', function()
 	{
 		alert("Great shot!");
+		display('#game');
 	})
 	
 	when('#miss', function()
 	{
 		alert("Aw boo :(");
+		display('#game');
 	})
 	
 	/*
