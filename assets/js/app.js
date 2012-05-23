@@ -30,35 +30,50 @@ run(function() {
 	
 	when('#startgame', function()
 	{
-		// save game configuration - this will then become the default
-		store.save({
-			key:'gameSettings',
-			minDifficulty:ui('minDifficulty'),
-			maxDifficulty:ui('maxDifficulty'),
-			gameLength:ui('gameLength')
-		});
-		display('#game');
-		
-		// now let's load the saved data into the game view
-		store.get('gameSettings', function(saved)
+		// first check the difficulty levels are sensible
+		if (ui('minDifficulty') > ui('maxDifficulty'))
 		{
-			if (saved)
+			alert("Nonsense difficulty levels chosen!");
+		}
+		else
+		{
+			// save game configuration - this will then become the default
+			store.save({
+				key:'gameSettings',
+				minDifficulty:ui('minDifficulty'),
+				maxDifficulty:ui('maxDifficulty'),
+				gameLength:ui('gameLength')
+			});
+			
+			display('#game');
+			
+			// now let's load the saved data into the game view
+			store.get('gameSettings', function(saved)
 			{
-				//alert("minDifficulty: " + saved.minDifficulty);
-				//alert("maxDifficulty: " + saved.maxDifficulty);
-				//alert("gameLength: " + saved.gameLength);
-				
-				//let's get a target
-				alert(targetsLevel1);
-				var target = 12;
-				x$('input[name=txtTarget]').attr('value',target);
-			}
-			else
-			{
-				alert("Error retrieving settings");
-			}
-		});
-		
+				if (saved)
+				{
+					//alert("minDifficulty: " + saved.minDifficulty);
+					//alert("maxDifficulty: " + saved.maxDifficulty);
+					//alert("gameLength: " + saved.gameLength);
+					
+					// create a new array by combining all arrays of valid difficulties
+					var targetsForGame = new Array();
+					
+					if (saved.minDifficulty == 1)
+						targetsForGame = targetsForGame.concat(targetsLevel1);
+
+					//let's get a target
+					alert(targetsForGame);
+					
+					var target = 12;
+					x$('input[name=txtTarget]').attr('value',target);
+				}
+				else
+				{
+					alert("Error retrieving settings");
+				}
+			});
+		}
 	}
 	);
 	
@@ -73,29 +88,4 @@ run(function() {
 		alert("Aw boo :(");
 		display('#game');
 	})
-	
-	/*
-	when('#game', function()
-	{
-		alert("trying to get game settings...");
-		// load game config from store and make sure we persist radio buttons.
-		
-		
-		store.get('gameSettings', function(saved) {
-			if (saved) {
-				if (saved.minDifficulty) {
-					x$('input[name=minDifficulty][value=' + saved.minDifficulty + ']').attr('checked',true);
-				}
-				if (saved.maxDifficulty) {
-					x$('input[name=maxDifficulty][value="' + saved.maxDifficulty + '"]').attr('checked',true);
-				}
-				if (saved.gameLength) {
-					x$('input[name=gameLength][value="' + saved.gameLength + '"]').attr('checked',true);
-				}
-			}
-		});
-		
-	}
-	);
-	*/
 });
