@@ -50,7 +50,7 @@ run(function() {
 				
 				//let's get a target
 				int target = 12;
-				x$('input[name=txtTarget]').value = target;
+				//x$('input[name=txtTarget]').value = target;
 			}
 			else
 			{
