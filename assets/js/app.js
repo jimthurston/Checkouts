@@ -50,10 +50,7 @@ run(function() {
 				
 				//let's get a target
 				var target = 12;
-				alert(target);
-				alert(x$('input[name=txtTarget]').attr('value'));
 				x$('input[name=txtTarget]').attr('value',target);
-				alert(x$('input[name=txtTarget]').attr('value'));
 			}
 			else
 			{
@@ -64,6 +61,16 @@ run(function() {
 		
 	}
 	);
+	
+	when('#hit', function()
+	{
+		alert("Great shot!");
+	})
+	
+	when('#miss', function()
+	{
+		alert("Aw boo :(");
+	})
 	
 	/*
 	when('#game', function()
