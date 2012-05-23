@@ -48,12 +48,15 @@ var run = function(application) {
 	
 	if (x$('input[name=txtTurn]').attr('value') == "")
 	{
-		x$('input[name=txtTurn]').attr('value', "Turn 1");
+		alert("first turn");
+		//x$('input[name=txtTurn]').attr('value', "Turn 1");
+		//x$('input[name=txtScore]').attr('value', "Score: 0");
 	}
 	else
 	{
-		var turn = x$('input[name=txtTurn]').attr('value').replace("Turn ", "");
-		x$('input[name=txtTurn]').attr('value', "Turn " + turn);
+		alert("later turn");
+		//var turn = x$('input[name=txtTurn]').attr('value').replace("Turn ", "");
+		//x$('input[name=txtTurn]').attr('value', "Turn " + turn);
 	}
 	
 	// load the saved data into the game view
