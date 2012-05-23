@@ -49,13 +49,16 @@ var run = function(application) {
 	if (x$('input[name=txtTurn]').attr('value') == "")
 	{
 		alert("first turn");
-		//x$('input[name=txtTurn]').attr('value', "Turn 1");
-		//x$('input[name=txtScore]').attr('value', "Score: 0");
+		x$('input[name=txtTurn]').attr('value', "Turn 1");
+		x$('input[name=txtScore]').attr('value', "Score: 0");
 	}
 	else
 	{
 		alert("later turn");
-		//var turn = x$('input[name=txtTurn]').attr('value').replace("Turn ", "");
+		var turn = x$('input[name=txtTurn]').attr('value');
+		turn = turn.replace("Turn ", "");
+		turn = turn + 1;
+		alert(turn);
 		//x$('input[name=txtTurn]').attr('value', "Turn " + turn);
 	}
 	
