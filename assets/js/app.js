@@ -25,6 +25,9 @@ run(function() {
 	
     when('#quit', function()
 	{
+		// resetting these stops the turns
+		x$('input[name=txtTurn]').attr('value', "");
+		x$('input[name=txtScore]').attr('value', "");
         display('#welcome');
     });
 	

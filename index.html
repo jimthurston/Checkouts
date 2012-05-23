@@ -77,13 +77,34 @@
 
 		<div id="game" class="view">
 			<form id="game_form">
-				<div align="left"><input type="text" name="txtTurn" class="stats" readonly="readonly" disabled="true"></div>
-				<div align="right"><input type="text" name="txtScore" class="stats" readonly="readonly" disabled="true"></div>
-				<br />
-				<input type="text" name="txtTarget" value="" class="target" readonly="readonly" disabled="true"><br /><br />
-				<button id="hit_button" class="Hit">Hit!</button> &nbsp; &nbsp; <button id="miss_button" class="Miss">Miss</button>
-				<br /><br /><br />
-				<button id="quit_button">Quit</button>
+				<table border="0">
+					<tr>
+						<td align="left">
+							<input type="text" name="txtTurn" class="stats" readonly="readonly" disabled="true">
+						</td>
+						<td align="right">
+							<input type="text" name="txtScore" class="stats" readonly="readonly" disabled="true">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<br />
+							<input type="text" name="txtTarget" value="" class="target" readonly="readonly" disabled="true">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<br />
+							<button id="hit_button" class="Hit">Hit!</button> &nbsp; &nbsp; <button id="miss_button" class="Miss">Miss</button>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<br />
+							<button id="quit_button">Quit</button>
+						</td>
+					</tr>
+				</table>
 			</form>
 		</div>
 

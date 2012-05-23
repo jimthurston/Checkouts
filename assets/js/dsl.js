@@ -59,7 +59,7 @@ var run = function(application) {
 		turn = turn.replace("Turn ", "");
 		turn = turn + 1;
 		alert(turn);
-		//x$('input[name=txtTurn]').attr('value', "Turn " + turn);
+		x$('input[name=txtTurn]').attr('value', "Turn " + turn);
 	}
 	
 	// load the saved data into the game view
