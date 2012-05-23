@@ -44,13 +44,16 @@ run(function() {
 		{
 			if (saved)
 			{
-				alert("minDifficulty: " + saved.minDifficulty);
-				alert("maxDifficulty: " + saved.maxDifficulty);
-				alert("gameLength: " + saved.gameLength);
+				//alert("minDifficulty: " + saved.minDifficulty);
+				//alert("maxDifficulty: " + saved.maxDifficulty);
+				//alert("gameLength: " + saved.gameLength);
 				
 				//let's get a target
 				var target = 12;
+				alert(target);
+				alert(x$('input[name=txtTarget]').value);
 				x$('input[name=txtTarget]').value = target;
+				alert(x$('input[name=txtTarget]').value);
 			}
 			else
 			{
