@@ -52,10 +52,6 @@ run(function() {
 			{
 				if (saved)
 				{
-					//alert("minDifficulty: " + saved.minDifficulty);
-					//alert("maxDifficulty: " + saved.maxDifficulty);
-					//alert("gameLength: " + saved.gameLength);
-					
 					// create a new array by combining all arrays of valid difficulties
 					var targetsForGame = new Array();
 					
@@ -80,11 +76,12 @@ run(function() {
 					if (saved.maxDifficulty == 7)
 						targetsForGame = targetsForGame.concat(targetsLevel7);
 
-						
-					//let's get a target
-					alert(targetsForGame);
-					
-					var target = 12;
+					//let's get a random target (zero-based for array indexing)
+					alert("number of poss targets: " + targetsForGame.length);
+					var targetIndex = Math.floor((Math.random() * targetsForGame.length));
+					alert(targetIndex);
+					var target = targetsForGame[targetIndex];
+					alert(target);
 					x$('input[name=txtTarget]').attr('value',target);
 				}
 				else
