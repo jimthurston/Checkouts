@@ -51,9 +51,9 @@ run(function() {
 				//let's get a target
 				var target = 12;
 				alert(target);
-				alert(x$('input[id=txtTarget]').value);
-				x$('input[id=txtTarget]').value = target;
-				alert(x$('input[id=txtTarget]').value);
+				alert(x$('input[name=txtTarget]').value);
+				x$('input[name=txtTarget]').value = target;
+				alert(x$('input[name=txtTarget]').value);
 			}
 			else
 			{
