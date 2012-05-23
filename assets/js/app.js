@@ -49,8 +49,8 @@ run(function() {
 				alert("gameLength: " + saved.gameLength);
 				
 				//let's get a target
-				//int target = 12;
-				//x$('input[id=txtTarget]').value = target;
+				int target = 12;
+				x$('input[name=txtTarget]').value = target;
 			}
 			else
 			{
