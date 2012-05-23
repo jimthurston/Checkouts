@@ -42,7 +42,7 @@ var run = function(application) {
     }
 }
 
-, gameTurn = function()
+, gameTurn = function(action)
 {
 	display('#game');
 	

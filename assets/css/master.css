@@ -92,13 +92,13 @@ input {
 
 .Hit {
 	width: 100px;
-	background:#00ff00;
+	background:#00aa00;
 	font-size: 20px;
 }
 
 .Miss {
 	width: 100px;
-	background:#ff0000;
+	background:#cc0000;
 	font-size: 20px;
 }
 
@@ -106,6 +106,14 @@ input {
 	width: 60px;
 	height:40px;
 	font-size: 30px;
+	border:0 none;
+	text-align:center;
+}
+
+.stats {
+	width: 60px;
+	height:30px;
+	font-size: 20px;
 	border:0 none;
 	text-align:center;
 }
