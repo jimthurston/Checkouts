@@ -62,6 +62,25 @@ run(function() {
 					if (saved.minDifficulty == 1)
 						targetsForGame = targetsForGame.concat(targetsLevel1);
 
+					if (saved.minDifficulty <= 2 && saved.maxDifficulty >= 2)
+						targetsForGame = targetsForGame.concat(targetsLevel2);
+
+					if (saved.minDifficulty <= 3 && saved.maxDifficulty >= 3)
+						targetsForGame = targetsForGame.concat(targetsLevel3);
+
+					if (saved.minDifficulty <= 4 && saved.maxDifficulty >= 4)
+						targetsForGame = targetsForGame.concat(targetsLevel4);
+
+					if (saved.minDifficulty <= 5 && saved.maxDifficulty >= 5)
+						targetsForGame = targetsForGame.concat(targetsLevel5);
+
+					if (saved.minDifficulty <= 6 && saved.maxDifficulty >= 6)
+						targetsForGame = targetsForGame.concat(targetsLevel6);
+
+					if (saved.maxDifficulty == 7)
+						targetsForGame = targetsForGame.concat(targetsLevel7);
+
+						
 					//let's get a target
 					alert(targetsForGame);
 					
