@@ -150,7 +150,7 @@ var run = function(application) {
 , gameOver = function(gameLength, finalScore)
 {
 	display('#gameOver');
-	
+	alert("I showed the gameOver screen...");
 }
 
 // set up an array of targets for each difficulty level
