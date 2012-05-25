@@ -58,10 +58,10 @@ var run = function(application) {
 		var target - parseInt(x$('input[name=txtTarget]').attr('value'));
 		
 		// add any score
-		if (action == "hit")
-		{
-			var thisScore = 0;
-		}
+		//if (action == "hit")
+		//{
+		//	var thisScore = 0;
+		//}
 		
 		// increment turn
 		store.get('gameSettings', function(saved)
