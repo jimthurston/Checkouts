@@ -48,18 +48,15 @@ var run = function(application) {
 	
 	if (x$('input[name=txtTurn]').attr('value') == "")
 	{
-		x$('input[name=txtTurn]').attr('value', "Turn 1");
-		x$('input[name=txtScore]').attr('value', "Score: 0");
+		x$('input[name=txtTurn]').attr('value', "1");
+		x$('input[name=txtScore]').attr('value', "0");
 	}
 	else
 	{
 		var turn = x$('input[name=txtTurn]').attr('value');
 		alert(turn);
-		var turnNum = turn.replace(/Turn /,"");
-		alert(turnNum);
-
-		//turn = turn + 1;
-		//alert(turn);
+		turn = turn + 1;
+		alert(turn);
 		//x$('input[name=txtTurn]').attr('value', "Turn " + turn);
 	}
 	
