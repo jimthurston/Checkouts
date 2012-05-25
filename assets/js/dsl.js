@@ -55,7 +55,7 @@ var run = function(application) {
 	{
 		var turn = parseInt(x$('input[name=txtTurn]').attr('value'));
 		var score = parseInt(x$('input[name=txtScore]').attr('value'));
-		var target - parseInt(x$('input[name=txtTarget]').attr('value'));
+		var target = parseInt(x$('input[name=txtTarget]').attr('value'));
 		
 		// add any score
 		//if (action == "hit")
