@@ -119,16 +119,24 @@ var run = function(application) {
 			// fetch the difficulty and display this too
 			var difficulty = 0;
 			
-			alert(targetsLevel1.indexOf(target));
-			//alert(targetsLevel2.indexOf(target));
+			if (targetsLevel1.indexOf(target) != -1)
+				difficulty = 1;
+			else if (targetsLevel2.indexOf(target) != -1)
+				difficulty = 2;
+			else if (targetsLevel3.indexOf(target) != -1)
+				difficulty = 3;
+			else if (targetsLevel4.indexOf(target) != -1)
+				difficulty = 4;
+			else if (targetsLevel5.indexOf(target) != -1)
+				difficulty = 5;
+			else if (targetsLevel6.indexOf(target) != -1)
+				difficulty = 6;
+			else if (targetsLevel7.indexOf(target) != -1)
+				difficulty = 7;
+			else
+				alert("Error getting difficulty from target.");
 			
-			//alert($.inArray(target, targetsLevel1);
-			//alert($.inArray(target, targetsLevel2);
-			
-			
-			//if (targetsLevel1.indexOf(target) != -1)
-			//	difficulty = 1;
-			
+			x$('input[name=txtDifficulty]').attr('value',difficulty);
 		}
 		else
 		{
