@@ -55,8 +55,8 @@ var run = function(application) {
 	{
 		var turn = x$('input[name=txtTurn]').attr('value');
 		alert(turn);
-		alert(turn.replace('Turn ',''));
-		var turnNum = turn.replace('Turn ','');
+		alert(turn.Replace("Turn ", ""));
+		var turnNum = turn.Replace("Turn ","");
 		turn = turn + 1;
 		alert(turn);
 		x$('input[name=txtTurn]').attr('value', "Turn " + turn);
