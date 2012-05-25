@@ -60,7 +60,7 @@ var run = function(application) {
 		// add any score
 		if (action == "hit")
 		{
-			//var thisScore = 
+			var thisScore = 0;
 		}
 		
 		// increment turn
@@ -119,12 +119,15 @@ var run = function(application) {
 			// fetch the difficulty and display this too
 			var difficulty = 0;
 			
-			alert(targetsLevel1.indexOf(target));
-			alert(targetsLevel2.indexOf(target));
+			//alert(targetsLevel1.indexOf(target));
+			//alert(targetsLevel2.indexOf(target));
+			
+			alert($.inArray(target, targetsLevel1);
+			alert($.inArray(target, targetsLevel2);
 			
 			
-			if (targetsLevel1.indexOf(target) != -1)
-				difficulty = 1;
+			//if (targetsLevel1.indexOf(target) != -1)
+			//	difficulty = 1;
 			
 		}
 		else
