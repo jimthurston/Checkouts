@@ -53,7 +53,7 @@ var run = function(application) {
 	}
 	else
 	{
-		var turn = x$('input[name=txtTurn]').attr('value');
+		var turn = parseInt(x$('input[name=txtTurn]').attr('value'));
 		alert(turn);
 		turn = turn + 1;
 		alert(turn);
