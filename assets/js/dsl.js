@@ -15,7 +15,7 @@ var run = function(application) {
 // shows id passed
 , display = function(id)
 {
-    x$(["#welcome", "#newgame", "#game", "#stats", "#settings"]).each(function(e, i)
+    x$(["#welcome", "#newgame", "#game", "#stats", "#settings", "#gameOver"]).each(function(e, i)
 	{
 		var display = '#' + x$(e)[0].id === id ? 'block' : 'none';
 		x$(e).css({ 'display':display })
