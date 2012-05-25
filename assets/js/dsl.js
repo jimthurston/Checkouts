@@ -119,11 +119,11 @@ var run = function(application) {
 			// fetch the difficulty and display this too
 			var difficulty = 0;
 			
-			//alert(targetsLevel1.indexOf(target));
-			//alert(targetsLevel2.indexOf(target));
+			alert(targetsLevel1.indexOf(target));
+			alert(targetsLevel2.indexOf(target));
 			
-			//alert($.inArray(target, targetsLevel1);
-			//alert($.inArray(target, targetsLevel2);
+			alert($.inArray(target, targetsLevel1);
+			alert($.inArray(target, targetsLevel2);
 			
 			
 			//if (targetsLevel1.indexOf(target) != -1)
