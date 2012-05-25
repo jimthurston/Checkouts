@@ -54,15 +54,24 @@ var run = function(application) {
 	else
 	{
 		var turn = parseInt(x$('input[name=txtTurn]').attr('value'));
+		var score = parseInt(x$('input[name=txtScore]').attr('value'));
+		var target - parseInt(x$('input[name=txtTarget]').attr('value'));
 		
+		// add any score
+		if (action == "hit")
+		{
+			//var thisScore = 
+		}
+		
+		// increment turn
 		store.get('gameSettings', function(saved)
 		{
 			if (saved)
 			{
-				alert(saved.gameLength);
 				if (turn == saved.gameLength)
 				{
 					x$('input[name=txtTurn]').attr('value', "End");
+					// need to do some sort of end game code here...
 				}
 				else
 				{
@@ -102,10 +111,21 @@ var run = function(application) {
 			if (saved.maxDifficulty == 7)
 				targetsForGame = targetsForGame.concat(targetsLevel7);
 
-			//let's get a random target (zero-based for array indexing)
+			// let's get a random target (zero-based for array indexing)
 			var targetIndex = Math.floor((Math.random() * targetsForGame.length));
 			var target = targetsForGame[targetIndex];
 			x$('input[name=txtTarget]').attr('value',target);
+			
+			// fetch the difficulty and display this too
+			var difficulty = 0;
+			
+			alert(targetsLevel1.indexOf(target));
+			alert(targetsLevel2.indexOf(target));
+			
+			
+			if (targetsLevel1.indexOf(target) != -1)
+				difficulty = 1;
+			
 		}
 		else
 		{
