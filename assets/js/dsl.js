@@ -45,6 +45,7 @@ var run = function(application) {
 , gameTurn = function(action)
 {
 	display('#game');
+	store.get('gameSettings', function(saved){});
 	
 	if (x$('input[name=txtTurn]').attr('value') == "")
 	{
@@ -54,10 +55,16 @@ var run = function(application) {
 	else
 	{
 		var turn = parseInt(x$('input[name=txtTurn]').attr('value'));
-		alert(turn);
-		turn = turn + 1;
-		alert(turn);
-		x$('input[name=txtTurn]').attr('value', turn);
+		
+		if (turn == saved.gameLength)
+		{
+			x$('input[name=txtTurn]').attr('value', "End");
+		}
+		else
+		{
+			turn = turn + 1;
+			x$('input[name=txtTurn]').attr('value', turn);
+		}
 	}
 	
 	// load the saved data into the game view
