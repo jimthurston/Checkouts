@@ -55,13 +55,21 @@ run(function() {
 	
 	when('#hit', function()
 	{
-		
 		gameTurn("hit");
 	})
 	
 	when('#miss', function()
 	{
-		
 		gameTurn("miss");
+	})
+	
+	when('#stats2', function()
+	{
+		display('#stats');
+	})
+	
+	when('#game2', function()
+	{
+		display('#game');
 	})
 });

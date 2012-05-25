@@ -73,7 +73,7 @@ var run = function(application) {
 				if (turn == saved.gameLength)
 				{
 					x$('input[name=txtTurn]').attr('value', "End");
-					// need to do some sort of end game code here...
+					gameOver(turn, score);
 				}
 				else
 				{
@@ -145,6 +145,12 @@ var run = function(application) {
 			alert("Error retrieving settings");
 		}
 	});
+}
+
+, gameOver = function(gameLength, finalScore)
+{
+	display('#gameOver');
+	
 }
 
 // set up an array of targets for each difficulty level
