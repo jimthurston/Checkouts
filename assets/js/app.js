@@ -70,6 +70,6 @@ run(function() {
 	
 	when('#game2', function()
 	{
-		display('#game');
+		display('#newgame');
 	})
 });
