@@ -155,7 +155,7 @@ var run = function(application) {
 	display('#gameOver');
 	x$('input[name=txtFinalScore]').attr('value', finalScore);
 	x$('input[name=txtFinalGameLength]').attr('value', gameLength);
-	var rating = (finalScore / gameLength) * 100;
+	var rating = parseInt((finalScore / gameLength) * 100);
 	x$('input[name=txtFinalRating]').attr('value', rating);
 }
 
