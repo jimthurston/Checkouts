@@ -150,7 +150,10 @@ var run = function(application) {
 , gameOver = function(gameLength, finalScore)
 {
 	display('#gameOver');
-	alert("I showed the gameOver screen...");
+	x$('input[name=txtFinalScore]').attr('value', finalScore);
+	x$('input[name=txtFinalGameLength]').attr('value', gameLength);
+	var rating = (finalScore / gameLength) * 100;
+	x$('input[name=txtFinalRating]').attr('value', rating);
 }
 
 // set up an array of targets for each difficulty level
