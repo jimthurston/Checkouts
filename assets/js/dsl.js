@@ -149,6 +149,9 @@ var run = function(application) {
 
 , gameOver = function(gameLength, finalScore)
 {
+	// resetting these stops the turns
+	x$('input[name=txtTurn]').attr('value', "");
+	x$('input[name=txtScore]').attr('value', "");
 	display('#gameOver');
 	x$('input[name=txtFinalScore]').attr('value', finalScore);
 	x$('input[name=txtFinalGameLength]').attr('value', gameLength);
