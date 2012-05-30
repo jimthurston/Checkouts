@@ -86,24 +86,31 @@ input {
 
 .target {
 	width: 60px;
-	height:40px;
+	height:30px;
 	font-size: 30px;
 	border:0 none;
 	text-align:center;
+	margin: 0;
+	background: #fff;
+	background: -webkit-gradient(linear, 100% 0%, 0% 0%, from(#C8C8C8), color-stop(0.47, white), to(#C8C8C8));
+	color: #00c;
 }
 
 .stats {
-	width: 80px;
-	height:30px;
-	font-size: 20px;
+	width: 30px;
+	height:20px;
 	border:0 none;
-	text-align:center;
+	background: #fff;
+	background: -webkit-gradient(linear, 100% 0%, 0% 0%, from(#C8C8C8), color-stop(0.47, white), to(#C8C8C8));
+	margin: 0;
+	font: 18px Helvetica;
+	text-align: center;
 }
 
 .difficulty {
-	width: 60px;
-	height:40px;
-	font-size: 30px;
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
 	border:0 none;
-	text-align:center;
+	text-align:left;
 }
