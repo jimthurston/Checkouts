@@ -10,11 +10,10 @@ run(function() {
     when('#welcome');
     when('#newgame');
 	when('#stats');
-	when('#settings');
+	when('#help');
 	
-	when('#save', function()
+	when('#back', function()
 	{
-		// save settings here
 		display('#welcome');
     });
 	
