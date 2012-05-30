@@ -11,6 +11,10 @@ var run = function(application) {
 
 // throw our settings into a lawnchair
 , store = new Lawnchair({adaptor:'dom'})
+, turnStats = new Lawnchair({adaptor:'dom'})
+, gameStats = new Lawnchair({adaptor:'dom'})
+, tempStats = new Lawnchair({adaptor:'dom'})
+
 
 // shows id passed
 , display = function(id)
@@ -46,10 +50,12 @@ var run = function(application) {
 {
 	display('#game');
 	
+	// first turn so reset turn and score, and delete any temp stats
 	if (x$('input[name=txtTurn]').attr('value') == "")
 	{
 		x$('input[name=txtTurn]').attr('value', 1);
 		x$('input[name=txtScore]').attr('value', 0);
+		tempStats.nuke();
 	}
 	else
 	{
@@ -60,10 +66,19 @@ var run = function(application) {
 		// add any score
 		if (action == "hit")
 		{
-			var thisScore = parseInt(x$('input[name=txtDifficulty]').attr('value'));
-			score = score + thisScore;
+			var thisDifficulty = parseInt(x$('input[name=txtDifficulty]').attr('value'));
+			score = score + thisDifficulty;
 			x$('input[name=txtScore]').attr('value', score);
 		}
+		
+		// save in temp stats
+		tempStats.save
+		({
+			key:turn,
+			target:target,
+			difficulty:thisDifficulty,
+			hit:(action == "hit")
+		});
 		
 		// increment turn
 		store.get('gameSettings', function(saved)
@@ -149,6 +164,35 @@ var run = function(application) {
 
 , gameOver = function(gameLength, finalScore)
 {
+	// figure out a game number (key)
+	var gameNumber = gameStats.length;
+	alert(gameNumber);
+
+	// save game stats
+	gameStats.save
+	({
+		key:gameNumber,
+		date:new Date(),
+		turns:gameLength,
+		score:finalScore
+	});
+	
+	alert('Saved game stats');
+	
+	// save temp stats permanently
+	tempStats.each(function(record, index)
+	{
+		turnStats.save
+		({
+			key:gameNumber + '_' + record.key,
+			target:record.target,
+			difficulty:record.difficulty,
+			hit:record.hit
+		});
+	});
+	
+	alert('Temp stats saved to perm store');
+
 	// resetting these stops the turns
 	x$('input[name=txtTurn]').attr('value', "");
 	x$('input[name=txtScore]').attr('value', "");
