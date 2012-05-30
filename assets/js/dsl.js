@@ -165,8 +165,12 @@ var run = function(application) {
 , gameOver = function(gameLength, finalScore)
 {
 	// figure out a game number (key)
-	var gameNumber = gameStats.length;
-	alert(gameNumber);
+	var gameNumber;
+	gameStats.all(function(arrGames)
+	{
+		gameNumber = arrGames.length;
+		alert(gameNumber);
+	});
 
 	// save game stats
 	gameStats.save
