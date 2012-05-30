@@ -11,10 +11,10 @@ var run = function(application) {
 
 // throw our settings into a lawnchair
 //, store = new Lawnchair({adaptor:'dom'})
-, store = Lawnchair({name:'store'})
-, turnStats = Lawnchair({name:'turnStats'})
-, gameStats = Lawnchair({name:'gameStats'})
-, tempStats = Lawnchair({name:'tempStats'})
+, store = new Lawnchair({name:'store'})
+, turnStats = new Lawnchair({name:'turnStats'})
+, gameStats = new Lawnchair({name:'gameStats'})
+, tempStats = new Lawnchair({name:'tempStats'})
 
 // shows id passed
 , display = function(id)
