@@ -97,11 +97,10 @@ input {
 }
 
 .stats {
-	width: 30px;
-	height:20px;
+	width: 20px;
+	height:18px;
 	border:0 none;
-	background: #fff;
-	background: -webkit-gradient(linear, 100% 0%, 0% 0%, from(#C8C8C8), color-stop(0.47, white), to(#C8C8C8));
+	background: transparent;
 	margin: 0;
 	font: 18px Helvetica;
 	text-align: center;
@@ -113,4 +112,5 @@ input {
 	font-size: 20px;
 	border:0 none;
 	text-align:left;
+	background:transparent;
 }
