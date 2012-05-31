@@ -206,6 +206,11 @@ var run = function(application) {
 {
 	display('#stats');
 	
+			gameStats.max('score', function(highScore)
+			{
+				alert(highScore);
+			});
+			
 	// show the relevant div depending on whether stats exist or not
 	gameStats.all(function(arrGames)
 	{
