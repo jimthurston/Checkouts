@@ -206,9 +206,14 @@ var run = function(application) {
 , showStats = function()
 {
 	display('#stats');
+	var highScore, all;
+	gameStats.all(function(a)
+	{
+		all = a.map(function(e){ return e['score'] });
+		highScore = Math['max'].apply(Math, all);
+	});
 	
-	var count = gameStats.count('score');
-	alert(count);
+	alert(highScore);
 	
 	/*
 	gameStats.where('score != ""').desc('score', function(s)
