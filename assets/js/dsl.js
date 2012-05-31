@@ -202,6 +202,24 @@ var run = function(application) {
 	x$('input[name=txtFinalRating]').attr('value', rating);
 }
 
+, showStats = function()
+{
+	display('#stats');
+	
+	// show the relevant div depending on whether stats exist or not
+	gameStats.get('1_1', function(saved)
+	{
+		if (saved)
+		{
+			x$('#statsok').css({ 'display':block });
+		}
+		else
+		{
+			x$('#nostats').css({ 'display':block });
+		}
+	});
+}
+
 // set up an array of targets for each difficulty level
 , targetsLevel1 = [4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40]
 , targetsLevel2 = [2, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60]

@@ -55,6 +55,7 @@ body {
 .help {
   text-align: left;
   font-size: 16px;
+  padding: 6px;
 }
 
 /* our views */

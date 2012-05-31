@@ -9,19 +9,28 @@ run(function() {
     // a little inline controller
     when('#welcome');
     when('#newgame');
-	when('#stats');
 	when('#help');
-	
+
+	when('#stats', function()
+	{
+		showStats();
+	});
+
+	when('#stats2', function()
+	{
+		showStats();
+	});
+
 	when('#back', function()
 	{
 		display('#welcome');
     });
-	
+
 	when('#statsok', function()
 	{
 		display('#welcome');
     });
-	
+
     when('#quit', function()
 	{
 		// resetting these stops the turns
@@ -55,20 +64,15 @@ run(function() {
 	when('#hit', function()
 	{
 		gameTurn("hit");
-	})
+	});
 	
 	when('#miss', function()
 	{
 		gameTurn("miss");
-	})
-	
-	when('#stats2', function()
-	{
-		display('#stats');
-	})
+	});
 	
 	when('#game2', function()
 	{
 		display('#newgame');
-	})
+	});
 });
