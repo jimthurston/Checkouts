@@ -212,12 +212,12 @@ var run = function(application) {
 		if (arrGames.length > 0)
 		{
 			alert('found some stats');
-			x$('#statsok').css({ 'display':block });
+			x$('#statsok').css({ 'display':'block' });
 		}
 		else
 		{
 			alert('found no stats');
-			x$('#nostats').css({ 'display':block });
+			x$('#nostats').css({ 'display':'block' });
 		}
 	});
 }
