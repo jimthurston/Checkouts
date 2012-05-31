@@ -206,13 +206,11 @@ var run = function(application) {
 {
 	display('#stats');
 	
-	alert('attempting to fetch stats...');
-	
 	// show the relevant div depending on whether stats exist or not
-	gameStats.get('1_1', function(saved)
+	gameStats.all(function(arrGames)
 	{
-		alert('in saved function');
-		if (saved)
+		alert('in arrGames function');
+		if (arrGames.length > 0)
 		{
 			alert('found some stats');
 			x$('#statsok').css({ 'display':block });
