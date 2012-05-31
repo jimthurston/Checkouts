@@ -215,7 +215,7 @@ var run = function(application) {
 			x$('#statsok').css({ 'display':'block' });
 			
 			alert(arrGames);
-			var allScores = arrGames.map(function(e){ return e[score] });
+			var allScores = arrGames.map(function(e){ return e['score']; });
 			alert(allScores);
 			var highScore = Math.max.apply(Math, allScores);
 			alert(highScore);
