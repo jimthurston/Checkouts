@@ -210,7 +210,7 @@ var run = function(application) {
 	gameStats.all(function(a)
 	{
 		all = a.map(function(e){ return e['score'] });
-		highScore = Math['max'].apply(Math, all);
+		highScore = Math.max.apply(Math, all);
 	});
 	
 	alert(highScore);
