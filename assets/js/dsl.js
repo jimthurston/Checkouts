@@ -206,25 +206,6 @@ var run = function(application) {
 , showStats = function()
 {
 	display('#stats');
-	var highScore, all;
-	gameStats.all(function(a)
-	{
-		all = a.map(function(e){ return e[score] });
-		highScore = Math.max.apply(Math, all);
-	});
-	
-	alert(highScore);
-	
-	/*
-	gameStats.where('score != ""').desc('score', function(s)
-	{
-		alert(s);
-	});
-	*/
-	//		gameStats.max('score', function(max)
-	//		{
-	//			alert(max);
-	//		});
 			
 	// show the relevant div depending on whether stats exist or not
 	gameStats.all(function(arrGames)
@@ -232,10 +213,12 @@ var run = function(application) {
 		if (arrGames.length > 0)
 		{
 			x$('#statsok').css({ 'display':'block' });
-			gameStats.max('score', function(highScore)
-			{
-				alert(highScore);
-			});
+			
+			alert(arrGames);
+			var allScores = arrGames.map(function(e){ return e[score] });
+			alert(allScores);
+			var highScore = Math.max.apply(Math, allScores);
+			alert(highScore);
 		}
 		else
 		{
