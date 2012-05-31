@@ -212,7 +212,7 @@ var run = function(application) {
 		if (arrGames.length > 0)
 		{
 			x$('#statsok').css({ 'display':'block' });
-			gameStats.max('score', 'alert(score)');
+			gameStats.max('score', 'alert(max)');
 		}
 		else
 		{
