@@ -206,10 +206,14 @@ var run = function(application) {
 {
 	display('#stats');
 	
-			gameStats.max('score', function(max)
-			{
-				alert(max);
-			});
+	gameStats.where('score != ""').desc('score', function(s)
+	{
+		alert(s);
+	});
+	//		gameStats.max('score', function(max)
+	//		{
+	//			alert(max);
+	//		});
 			
 	// show the relevant div depending on whether stats exist or not
 	gameStats.all(function(arrGames)
