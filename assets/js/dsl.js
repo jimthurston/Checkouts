@@ -206,9 +206,9 @@ var run = function(application) {
 {
 	display('#stats');
 	
-			gameStats.max('score', function(highScore)
+			gameStats.max('score', function(max)
 			{
-				alert(highScore);
+				alert(max);
 			});
 			
 	// show the relevant div depending on whether stats exist or not
