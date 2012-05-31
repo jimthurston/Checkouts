@@ -211,12 +211,11 @@ var run = function(application) {
 	{
 		if (arrGames.length > 0)
 		{
-			alert('found some stats');
 			x$('#statsok').css({ 'display':'block' });
+			gameStats.max('score', 'alert(score)');
 		}
 		else
 		{
-			alert('found no stats');
 			x$('#nostats').css({ 'display':'block' });
 		}
 	});
