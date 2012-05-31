@@ -166,10 +166,15 @@ var run = function(application) {
 {
 	// figure out a game number (key)
 	var gameNumber;
+	
+	var count = gameStats.count('score');
+	alert(count);
+	/*
 	gameStats.all(function(arrGames)
 	{
 		gameNumber = arrGames.length;
 	});
+	*/
 
 	// save game stats
 	gameStats.save
