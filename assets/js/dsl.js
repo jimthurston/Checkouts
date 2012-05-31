@@ -167,14 +167,10 @@ var run = function(application) {
 	// figure out a game number (key)
 	var gameNumber;
 	
-	var count = gameStats.count('score');
-	alert(count);
-	/*
 	gameStats.all(function(arrGames)
 	{
 		gameNumber = arrGames.length;
 	});
-	*/
 
 	// save game stats
 	gameStats.save
@@ -211,10 +207,15 @@ var run = function(application) {
 {
 	display('#stats');
 	
+	var count = gameStats.count('score');
+	alert(count);
+	
+	/*
 	gameStats.where('score != ""').desc('score', function(s)
 	{
 		alert(s);
 	});
+	*/
 	//		gameStats.max('score', function(max)
 	//		{
 	//			alert(max);
