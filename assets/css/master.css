@@ -58,6 +58,10 @@ body {
   margin: 6px;
 }
 
+.divStats {
+	display: none;
+}
+
 /* our views */
 #welcome
 {
