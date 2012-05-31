@@ -169,7 +169,6 @@ var run = function(application) {
 	gameStats.all(function(arrGames)
 	{
 		gameNumber = arrGames.length;
-		alert(gameNumber);
 	});
 
 	// save game stats
@@ -180,8 +179,6 @@ var run = function(application) {
 		turns:gameLength,
 		score:finalScore
 	});
-	
-	alert('Saved game stats');
 	
 	// save temp stats permanently
 	tempStats.each(function(record, index)
@@ -194,8 +191,6 @@ var run = function(application) {
 			hit:record.hit
 		});
 	});
-	
-	alert('Temp stats saved to perm store');
 
 	// resetting these stops the turns
 	x$('input[name=txtTurn]').attr('value', "");

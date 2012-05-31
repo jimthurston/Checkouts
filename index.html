@@ -121,13 +121,63 @@
 		</div>
 		
 		<div id="stats" class="view">
-			<strong>Your Checkouts Stats</strong>
+			<div id="nostats" style="display:none;">You need to play some games before stats can be shown!</div>
+			<div id="statsok" style="display:none;">
+				High Score: <input type="text" name="highScore" value="" class="stats" readonly="readonly" disabled="true"><br />
+				Highest Rating: <input type="text" name="highestRating" value="" class="stats" readonly="readonly" disabled="true"><br />
+				Games Played: <input type="text" name="gamesPlayed" value="" class="stats" readonly="readonly" disabled="true"><br />
+				Average Rating: <input type="text" name="averageRating" value="" class="stats" readonly="readonly" disabled="true"><br />
+				Current Rating: <input type="text" name="currentRating" value="" class="stats" readonly="readonly" disabled="true"><br />
+			</div>
 			<br /><br />
 			<button id="statsok_button">OK</button>
 		</div>
 
 		<div id="help" class="view">
 			<strong>How to use this app</strong>
+			<br /><br />
+			On the 'New Game' screen, first choose the difficulty range you want to try for.  The difficulty levels are reflected in the scores you can achieve too, 
+			so you'll need to choose higher difficulties to get the best score.  So, a checkout with difficulty rating 1 scores 1 point, a checkout with difficulty rating of 7 scores 7 points, etc.
+			<br /><br />
+			The difficulty ratings are, roughly, as follows:
+			<table border="0" cellpadding="4" cellspacing="0">
+				<th>
+					<td>Difficulty</td>
+					<td>Description</td>
+				</th>
+				<tr>
+					<td>1</td>
+					<td>Just a double - 4, 6, 8 etc. up to 40 - <strong>excluding</strong> 2.</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>A single must be hit before the double.  3, 5, 7 etc. up to 60.  I put 2 in this group also :)</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Two singles, or a treble, must be hit before the double.  61 - 80.</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>At least one treble must be hit before the double, unless you checkout with Bull.  81 - 100, excluding 99.</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>At least one treble and a single must be hit before the double.  99, 101 - 120.</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>Two trebles must be hit before the double, unless you checkout with Bull.  121 - 160.</td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>The ultimate checkout - two trebles and the Bull.  161, 164, 167, 170.</td>
+				</tr>
+			</table>
+			<br /><br />
+			At the end of the game, you'll get a screen showing how well you did.  The 'checkout rating' is simply your final score divided by the number of turns taken, multipled by 100. 
+			As you can vary the game length, it's this rating that you can truly compare with previous games.  The app will use this rating to calculate how you're improving on the stats page,
+			by showing your current average rating (for the month) compared with previous months.
 			<br /><br />
 			<button id="back_button">Back</button>
 		</div>
