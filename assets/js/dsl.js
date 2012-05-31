@@ -164,6 +164,15 @@ var run = function(application) {
 
 , gameOver = function(gameLength, finalScore)
 {
+	// resetting these stops the turns
+	x$('input[name=txtTurn]').attr('value', "");
+	x$('input[name=txtScore]').attr('value', "");
+	display('#gameOver');
+	x$('input[name=txtFinalScore]').attr('value', finalScore);
+	x$('input[name=txtFinalGameLength]').attr('value', gameLength);
+	var rating = parseInt((finalScore / gameLength) * 100);
+	x$('input[name=txtFinalRating]').attr('value', rating);
+	
 	// figure out a game number (key)
 	var gameNumber;
 	
@@ -178,7 +187,8 @@ var run = function(application) {
 		key:gameNumber,
 		date:new Date(),
 		turns:gameLength,
-		score:finalScore
+		score:finalScore,
+		rating:rating
 	});
 	
 	// save temp stats permanently
@@ -192,15 +202,6 @@ var run = function(application) {
 			hit:record.hit
 		});
 	});
-
-	// resetting these stops the turns
-	x$('input[name=txtTurn]').attr('value', "");
-	x$('input[name=txtScore]').attr('value', "");
-	display('#gameOver');
-	x$('input[name=txtFinalScore]').attr('value', finalScore);
-	x$('input[name=txtFinalGameLength]').attr('value', gameLength);
-	var rating = parseInt((finalScore / gameLength) * 100);
-	x$('input[name=txtFinalRating]').attr('value', rating);
 }
 
 , showStats = function()
@@ -213,12 +214,24 @@ var run = function(application) {
 		if (arrGames.length > 0)
 		{
 			x$('#statsok').css({ 'display':'block' });
-			
-			alert(arrGames);
+
+			// fetch high score
 			var allScores = arrGames.map(function(e){ return e['score']; });
-			alert(allScores);
 			var highScore = Math.max.apply(Math, allScores);
-			alert(highScore);
+			x$('input[name=txtHighScore]').attr('value', highScore);
+			
+			// fetch high rating
+			var allRatings = arrGames.map(function(e){ return e['rating']; });
+			var highRating =  Math.max.apply(Math, allRatings);
+			x$('input[name=txtHighestRating]').attr('value', highRating);
+			
+			// games played
+			x$('input[name=txtGamesPlayed]').attr('value', arrGames.length);
+			
+			// average rating
+			
+			// current rating
+			
 		}
 		else
 		{
