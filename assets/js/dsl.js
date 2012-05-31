@@ -209,16 +209,15 @@ var run = function(application) {
 	// show the relevant div depending on whether stats exist or not
 	gameStats.all(function(arrGames)
 	{
-		alert('in arrGames function');
 		if (arrGames.length > 0)
 		{
 			alert('found some stats');
-			x$('#statsok').css({ 'display':block });
+			x$('div[id=statsok]').css({ 'display':block });
 		}
 		else
 		{
 			alert('found no stats');
-			x$('#nostats').css({ 'display':block });
+			x$('div[id=nostats]').css({ 'display':block });
 		}
 	});
 }
