@@ -209,7 +209,7 @@ var run = function(application) {
 	var highScore, all;
 	gameStats.all(function(a)
 	{
-		all = a.map(function(e){ return e['score'] });
+		all = a.map(function(e){ return e[score] });
 		highScore = Math.max.apply(Math, all);
 	});
 	
