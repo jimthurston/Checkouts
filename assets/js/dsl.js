@@ -239,7 +239,9 @@ var run = function(application) {
 			var today = new Date();
 			arrGames.forEach(function(g)
 			{
-				var daysDifference = ((((g['date'] - today) / 1000) / 60) / 60) / 24;
+				alert(g['date']);
+				alert(g['date'].getTime());
+				var daysDifference = ((((g['date'].getTime() - today.getTime()) / 1000) / 60) / 60) / 24;
 				alert(daysDifference);
 				var monthSum = 0;
 				var count = 0;
