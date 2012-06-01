@@ -240,7 +240,7 @@ var run = function(application) {
 			arrGames.forEach(function(g)
 			{
 				alert(g['date']);
-				var time = g['date'].getTime();
+				var time = g['date'] - today;
 				alert(time);
 				var daysDifference = ((((g['date'].getTime() - today.getTime()) / 1000) / 60) / 60) / 24;
 				alert(daysDifference);
