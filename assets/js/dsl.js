@@ -222,13 +222,17 @@ var run = function(application) {
 			
 			// fetch high rating
 			var allRatings = arrGames.map(function(e){ return e['rating']; });
-			var highRating =  Math.max.apply(Math, allRatings);
+			var highRating = Math.max.apply(Math, allRatings);
 			x$('input[name=txtHighestRating]').attr('value', highRating);
 			
 			// games played
 			x$('input[name=txtGamesPlayed]').attr('value', arrGames.length);
 			
 			// average rating
+			var sumRatings = 0;
+			allRatings.each(function(r){ sumRatings += r; });
+			var avgRating = sumRatings / allRatings.length;
+			x$('input[name=txtAverageRating]').attr('value', avgRating);
 			
 			// current rating
 			
