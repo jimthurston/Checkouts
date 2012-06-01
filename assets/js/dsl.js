@@ -214,6 +214,7 @@ var run = function(application) {
 		if (arrGames.length > 0)
 		{
 			x$('#statsok').css({ 'display':'block' });
+			x$('#nostats').css({ 'display':'none' });
 
 			// fetch high score
 			var allScores = arrGames.map(function(e){ return e['score']; });
@@ -230,7 +231,8 @@ var run = function(application) {
 			
 			// average rating
 			var sumRatings = 0;
-			allRatings.each(function(r){ sumRatings += r; });
+			allRatings.forEach(function(r){ sumRatings += r; });
+			alert(sumRatings);
 			var avgRating = sumRatings / allRatings.length;
 			x$('input[name=txtAverageRating]').attr('value', avgRating);
 			
@@ -240,6 +242,7 @@ var run = function(application) {
 		else
 		{
 			x$('#nostats').css({ 'display':'block' });
+			x$('#statsok').css({ 'display':'none' });
 		}
 	});
 }
