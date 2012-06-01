@@ -240,9 +240,9 @@ var run = function(application) {
 			arrGames.forEach(function(g)
 			{
 				alert(g['date']);
-				var time = g['date'] - today;
+				var time = today - g['date'];
 				alert(time);
-				var daysDifference = ((((g['date'].getTime() - today.getTime()) / 1000) / 60) / 60) / 24;
+				var daysDifference = (((time / 1000) / 60) / 60) / 24;
 				alert(daysDifference);
 				var monthSum = 0;
 				var count = 0;
