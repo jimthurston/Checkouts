@@ -10,8 +10,8 @@ var run = function(application) {
 }
 
 // throw our settings into a lawnchair
-//, store = new Lawnchair({adaptor:'dom'})
-, store = new Lawnchair({name:'store'})
+, store = new Lawnchair({adaptor:'dom'})
+//, store = new Lawnchair({name:'store'})
 , turnStats = new Lawnchair({name:'turnStats'})
 , gameStats = new Lawnchair({name:'gameStats'})
 , tempStats = new Lawnchair({name:'tempStats'})
@@ -51,7 +51,7 @@ var run = function(application) {
 	display('#game');
 	
 	// first turn so reset turn and score, and delete any temp stats
-	if (x$('input[name=txtTurn]').attr('value') == "")
+	if ((x$('input[name=txtTurn]').attr('value') == "") || action == "new")
 	{
 		x$('input[name=txtTurn]').attr('value', 1);
 		x$('input[name=txtScore]').attr('value', 0);
