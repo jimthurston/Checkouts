@@ -246,9 +246,7 @@ var run = function(application) {
 				var daysDifference = ((((today - recDate) / 1000) / 60) / 60) / 24;
 				if (daysDifference <= 30)
 				{
-					alert(g['rating']);
 					monthSum += g['rating'];
-					alert(monthSum);
 					count++;
 				}
 				var curRating = monthSum / count;
