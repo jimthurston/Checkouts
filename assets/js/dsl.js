@@ -242,7 +242,7 @@ var run = function(application) {
 				alert(today);
 				alert(g['date']);
 				var gDateParts = g['date'].substr(0, 10).split("-");
-				var recDate = new Date(gDateParts[2], (gDateParts[1] - 1), gDateParts[0]);
+				var recDate = new Date(gDateParts[0], (gDateParts[1] - 1), gDateParts[2]);	// month is -1 cos js months are 0-based
 				alert(recDate);
 				var time = today - recDate;
 				alert(time);
