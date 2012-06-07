@@ -240,7 +240,8 @@ var run = function(application) {
 			arrGames.forEach(function(g)
 			{
 				alert(today);
-				var recDate = parseDate(g['date']);
+				alert(g['date']);
+				var recDate = new Date(g['date']);
 				alert(recDate);
 				var time = today - recDate;
 				alert(time);
