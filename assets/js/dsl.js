@@ -246,6 +246,7 @@ var run = function(application) {
 				var count = 0;
 				if (daysDifference <= 30)
 				{
+					alert(g['rating']);
 					monthSum += g['rating'];
 					alert(monthSum);
 					count++;
