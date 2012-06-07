@@ -237,13 +237,13 @@ var run = function(application) {
 			
 			// current rating - for this we look at all games played in the last 30 days.
 			var today = new Date();
+			var monthSum = 0;
+			var count = 0;
 			arrGames.forEach(function(g)
 			{
 				var gDateParts = g['date'].substr(0, 10).split("-");
 				var recDate = new Date(gDateParts[0], (gDateParts[1] - 1), gDateParts[2]);	// month is -1 cos js months are 0-based
 				var daysDifference = ((((today - recDate) / 1000) / 60) / 60) / 24;
-				var monthSum = 0;
-				var count = 0;
 				if (daysDifference <= 30)
 				{
 					alert(g['rating']);
