@@ -241,7 +241,7 @@ var run = function(application) {
 			{
 				alert(today);
 				alert(g['date']);
-				var recDate = new Date(g['date']);
+				var recDate = new Date(g['date'].substr(0, 10));
 				alert(recDate);
 				var time = today - recDate;
 				alert(time);
