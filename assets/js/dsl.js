@@ -239,20 +239,15 @@ var run = function(application) {
 			var today = new Date();
 			arrGames.forEach(function(g)
 			{
-				alert(today);
-				alert(g['date']);
 				var gDateParts = g['date'].substr(0, 10).split("-");
 				var recDate = new Date(gDateParts[0], (gDateParts[1] - 1), gDateParts[2]);	// month is -1 cos js months are 0-based
-				alert(recDate);
-				var time = today - recDate;
-				alert(time);
-				var daysDifference = (((time / 1000) / 60) / 60) / 24;
-				alert(daysDifference);
+				var daysDifference = ((((today - recDate) / 1000) / 60) / 60) / 24;
 				var monthSum = 0;
 				var count = 0;
 				if (daysDifference <= 30)
 				{
 					monthSum += g['rating'];
+					alert(monthSum);
 					count++;
 				}
 				var curRating = monthSum / count;
