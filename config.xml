@@ -21,9 +21,9 @@
 	<icon src="icons/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
 	<icon src="icons/ios/icon-72_at_2x.png" gap:platform="ios" width="144" height="144" />
 
+	<gap:splash src="assets/img/splash.png" width="320" height="480" />
+	<gap:splash src="assets/img/splash_at_2x.png" width="640" height="960" />
 	<!-- don't have these yet
-	<gap:splash src="splash/ios/Default.png" width="320" height="480" />
-	<gap:splash src="splash/ios/Default_at_2x.png" width="640" height="960" />
 	<gap:splash src="splash/ios/Default-Landscape.png" width="1024" height="768" />
 	<gap:splash src="splash/ios/Default-Portrait.png" width="768" height="1024" />
 	-->
