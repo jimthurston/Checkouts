@@ -19,13 +19,13 @@
 	</head>
 	<body>
 
-		<div id="welcome" class="view" style="background-image:url('assets/img/background.png');">
+		<div id="welcome" class="view" style="background-image:url('assets/img/background.png'); height:100%;">
 		  <div class="app_button" id="newgame_button">New Game</div>
 		  <div class="app_button" id="stats_button">View Stats</div>
   	      <div class="app_button" id="help_button">Help</div>
 		</div>
 
-		<div id="newgame" class="view">
+		<div id="newgame" class="view" style="background-image:url('assets/img/backgroundDim.png');">
 			<form id="newgame_form">
 				Choose difficulty range
 				<fieldset>
@@ -76,7 +76,7 @@
 			<div class="app_button" id="welcome_button">Back</div>
 		</div>
 
-		<div id="game" class="view">
+		<div id="game" class="view" style="background-image:url('assets/img/backgroundDim.png');">
 			<form id="game_form">
 				<table border="0">
 					<tr>
@@ -111,7 +111,7 @@
 			</form>
 		</div>
 
-		<div id="gameOver" class="view">
+		<div id="gameOver" class="view" style="background-image:url('assets/img/backgroundDim.png');">
 			Game Over
 			<br /><br />
 			You scored <input type="text" name="txtFinalScore" value="" class="stats" readonly="readonly" disabled="true"> in 
@@ -121,7 +121,7 @@
 			<button id="stats2_button">View Stats</button> &nbsp; &nbsp; <button id="game2_button">Play Again</button>
 		</div>
 		
-		<div id="stats" class="view">
+		<div id="stats" class="view" style="background-image:url('assets/img/backgroundDim.png');">
 			<div id="nostats" class="divStats">You need to play some games before stats can be shown!</div>
 			<div id="statsok" class="divStats">
 				High Score: <input type="text" name="txtHighScore" value="" class="stats" readonly="readonly" disabled="true"><br />
@@ -134,7 +134,7 @@
 			<button id="statsok_button">OK</button>
 		</div>
 
-		<div id="help" class="view">
+		<div id="help" class="view" style="background-image:url('assets/img/backgroundDim.png');">
 			<strong>How to use this app</strong>
 			<br /><br />
 			<div class="help">
