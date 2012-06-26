@@ -130,6 +130,13 @@ var run = function(application) {
 
 			// let's get a random target (zero-based for array indexing)
 			var targetIndex = Math.floor((Math.random() * targetsForGame.length));
+			
+			// ensure we haven't just chosen the same target as last time
+			var lastTarget = parseInt(x$('input[name=txtTarget]').attr('value'));
+			
+			while (targetsForGame[targetIndex] == lastTarget)
+				targetIndex = Math.floor((Math.random() * targetsForGame.length));
+			
 			var target = targetsForGame[targetIndex];
 			x$('input[name=txtTarget]').attr('value',target);
 			
