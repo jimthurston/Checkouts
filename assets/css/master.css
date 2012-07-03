@@ -50,8 +50,8 @@ body {
 	    so we'll set the views to default to be un-displayed
 	    and then override this based on the element id */
 	display: none;
-	height: 100px;
-	width: 100px;
+	height: 100%;
+	width: 100%;
 }
 
 .help {
