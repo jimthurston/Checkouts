@@ -45,7 +45,7 @@ body {
 }
 
 .view {
-	/* padding: 35px; */
+	padding: 35px;
 	/*  only one view is displayed at a time
 	    so we'll set the views to default to be un-displayed
 	    and then override this based on the element id */
