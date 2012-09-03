@@ -52,6 +52,7 @@ body {
 	display: none;
 	height: 460px;
 	width: 320px;
+	position:relative;
 }
 
 .help {
