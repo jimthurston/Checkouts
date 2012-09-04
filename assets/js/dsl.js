@@ -22,7 +22,9 @@ var run = function(application) {
 	alert('attempting to display ' + id);
     x$(["#welcome", "#newgame", "#game", "#stats", "#help", "#gameOver"]).each(function(e, i)
 	{
+		alert('in function');
 		var display = '#' + x$(e)[0].id === id ? 'block' : 'none';
+		alert('display: ' + display);
 		x$(e).css({ 'display':display })
     });
 }
@@ -32,9 +34,6 @@ var run = function(application) {
 {
     x$(id + '_button').on('touchstart', function ()
 	{
-		alert('button clicked');
-		alert(id);
-		
         if (x$(id).length > 0)
             display(id);
         if (callback)
