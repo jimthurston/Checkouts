@@ -33,6 +33,9 @@
 		</div>
 
 		<div id="newgame" class="view" style="background:url('assets/img/mainDim.png') no-repeat; background-size:100%;">
+			<br />
+			<img src="assets/img/imgNewGame.png" style="align:center;" />
+			<br />
 			<form id="newgame_form">
 				Choose difficulty range
 				<fieldset>
@@ -77,10 +80,12 @@
 					</div>
 				</fieldset>
 
-				<button id="startgame_button">Start Game</button>
+				<div id="startgame_button" style="background:url('assets/img/btnStartGame.png') no-repeat; width:133px; height:21px; align:center;"> &nbsp; </div>
+				<!--<button id="startgame_button">Start Game</button>-->
 			</form>
 
-			<div class="app_button" id="welcome_button">Back</div>
+			<div id="welcome_button" style="background:url('assets/img/btnBack.png') no-repeat; width:88px; height:33px; align:center;"> &nbsp; </div>
+			<!--<div class="app_button" id="welcome_button">Back</div>-->
 		</div>
 
 		<div id="game" class="view" style="background:url('assets/img/mainDim.png') no-repeat; background-size:100%;">
@@ -129,6 +134,9 @@
 		</div>
 		
 		<div id="stats" class="view" style="background:url('assets/img/mainDim.png') no-repeat; background-size:100%;">
+			<br />
+			<img src="assets/img/imgYourStats.png" style="align:center;" />
+			<br />
 			<div id="nostats" class="divStats">You need to play some games before stats can be shown!</div>
 			<div id="statsok" class="divStats">
 				High Score: <input type="text" name="txtHighScore" value="" class="stats" readonly="readonly" disabled="true"><br />
@@ -138,7 +146,10 @@
 				Current Rating: <input type="text" name="txtCurrentRating" value="" class="stats" readonly="readonly" disabled="true"><br />
 			</div>
 			<br /><br />
-			<button id="statsok_button">OK</button>
+			<div id="statsok_button" style="background:url('assets/img/btnOK.png') no-repeat; width:42px; height:33px; align:center;"> &nbsp; </div>
+			<br /><br />
+
+			<!--<button id="statsok_button">OK</button>-->
 		</div>
 
 		<div id="help" class="view" style="background:url('assets/img/mainDim.png') no-repeat; background-size:100%;">
@@ -186,8 +197,9 @@
 				As you can vary the game length, it's this rating that you can truly compare with previous games.  The app will use this rating to calculate how you're improving on the stats page,
 				by showing your current average rating (for the month) compared with previous months.
 			</div>
+			<br />
+			<div id="back_button" style="background:url('assets/img/btnBack.png') no-repeat; width:88px; height:33px; align:center;"> &nbsp; </div>
 			<br /><br />
-			<div id="back_button" style="background:url('assets/img/btnBack.png') no-repeat; width:53px; height:20px;"> &nbsp; </div>
 		</div>
 
 	</body>
