@@ -13,6 +13,7 @@
 		<script src="assets/js/lawnchair/plugins/lawnchair-aggregation-0.6.1.js" type="text/javascript" charset="utf-8"></script>
 		<script src="assets/js/lawnchair/plugins/lawnchair-query-0.6.1.js" type="text/javascript" charset="utf-8"></script>
 		<script src="assets/js/lawnchair/Lawnchair.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/js/iscroll-lite.js" type="text/javascript" charset="utf-8"></script>
 
 		<script src="assets/js/dsl.js" type="text/javascript" charset="utf-8"></script>
 		<script src="assets/js/app.js" type="text/javascript" charset="utf-8"></script>
@@ -22,6 +23,20 @@
 		// Prevent scrolling on this element
 		event.preventDefault();
 		}
+		
+		var myScroll;
+		function loaded()
+		{
+			setTimeout
+			(
+				function ()
+				{
+					myScroll = new iScroll('help');
+				},
+				100
+			);
+		}
+		window.addEventListener('load', loaded, false);
 		</script>
 	</head>
 	<body>
