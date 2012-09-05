@@ -36,7 +36,7 @@
 				100
 			);
 		}
-		window.addEventListener('load', loaded, false);
+		document.addEventListener('DOMContentLoaded', scroll, false);
 		</script>
 	</head>
 	<body>
@@ -174,11 +174,11 @@
 			<!--<button id="statsok_button">OK</button>-->
 		</div>
 
-		<div id="help" class="view" style="background:url('assets/img/mainDim_at_2x.png') no-repeat; background-size:100%;" ontouchmove="touchMove(event);">
+		<div id="help" class="view" style="background:url('assets/img/mainDim_at_2x.png') no-repeat; background-size:100%; position:absolute; z-index:2;">
 			<br />
 			<strong>How to use this app</strong>
 			<br /><br />
-			<div class="help" id="help_scroll">
+			<div class="help" id="help_scroll" style="position:absolute; z-index:1;">
 				On the 'New Game' screen, first choose the difficulty range you want to try for.  The difficulty levels are reflected in the scores you can achieve too, 
 				so you'll need to choose higher difficulties to get the best score.  So, a checkout with difficulty rating 1 scores 1 point, a checkout with difficulty rating of 7 scores 7 points, etc.
 				<br /><br />
