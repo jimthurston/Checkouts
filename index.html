@@ -31,7 +31,7 @@
 			(
 				function ()
 				{
-					myScroll = new iScroll('help');
+					myScroll = new iScroll('help_scroll');
 				},
 				100
 			);
@@ -47,7 +47,7 @@
 			<div id="help_button" style="background:url('assets/img/btnHelp_at_2x.png') no-repeat; background-size:100%; position:absolute; top:220px; left:20px; width:54px; height:20px; align:left; text-align:left;"> &nbsp; </div>
 		</div>
 
-		<div id="newgame" class="view" style="background:url('assets/img/mainDim_at_2x.png') no-repeat fixed; background-size:100%;" ontouchmove="touchMove(event);">
+		<div id="newgame" class="view" style="background:url('assets/img/mainDim_at_2x.png') no-repeat; background-size:100%;" ontouchmove="touchMove(event);">
 			<br />
 			<img src="assets/img/imgNewGame_at_2x.png" style="align:center;" width="103" height="21" />
 			<br /><br />
@@ -108,7 +108,7 @@
 			<!--<div class="app_button" id="welcome_button">Back</div>-->
 		</div>
 
-		<div id="game" class="view" style="background:url('assets/img/mainDim_at_2x.png') no-repeat fixed; background-size:100%;">
+		<div id="game" class="view" style="background:url('assets/img/mainDim_at_2x.png') no-repeat; background-size:100%;">
 			<form id="game_form">
 				<table border="0">
 					<tr>
@@ -143,7 +143,7 @@
 			</form>
 		</div>
 
-		<div id="gameOver" class="view" style="background:url('assets/img/mainDim_at_2x.png') no-repeat fixed; background-size:100%;">
+		<div id="gameOver" class="view" style="background:url('assets/img/mainDim_at_2x.png') no-repeat; background-size:100%;">
 			Game Over
 			<br /><br />
 			You scored <input type="text" name="txtFinalScore" value="" class="stats" readonly="readonly" disabled="true"> in 
@@ -174,11 +174,11 @@
 			<!--<button id="statsok_button">OK</button>-->
 		</div>
 
-		<div id="help" class="view" style="background:url('assets/img/mainDim.png') repeat; background-size:100%;">
+		<div id="help" class="view" style="background:url('assets/img/mainDim_at_2x.png') no-repeat; background-size:100%;">
 			<br />
 			<strong>How to use this app</strong>
 			<br /><br />
-			<div class="help">
+			<div class="help" id="help_scroll">
 				On the 'New Game' screen, first choose the difficulty range you want to try for.  The difficulty levels are reflected in the scores you can achieve too, 
 				so you'll need to choose higher difficulties to get the best score.  So, a checkout with difficulty rating 1 scores 1 point, a checkout with difficulty rating of 7 scores 7 points, etc.
 				<br /><br />
