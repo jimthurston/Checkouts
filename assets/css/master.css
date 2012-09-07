@@ -51,6 +51,8 @@ body {
 	display: none;
 	/*height: 460px;*/
 	/*width: 320px;*/
+	height: 100%;
+	width: 100%;
 	color: #fff;
 	background:url('assets/img/blank_at_2x.png');
 	background-repeat:repeat-y;
