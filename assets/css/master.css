@@ -51,6 +51,7 @@ body {
 	display: none;
 	height: 460px;
 	width: 320px;
+	color: #fff;
 	/*padding: 10px;*/
 	/*position:relative;*/
 }
@@ -59,10 +60,15 @@ body {
   text-align: left;
   font-size: 16px;
   margin: 6px;
+  color:#fff;
 }
 
 .divStats {
 	display: none;
+}
+
+.statsTable {
+	text-align: right;
 }
 
 /* our views */

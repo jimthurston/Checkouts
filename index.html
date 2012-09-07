@@ -49,7 +49,7 @@
 			<div id="help_button" style="background:url('assets/img/btnHelp_at_2x.png') no-repeat; background-size:100%; position:absolute; top:220px; left:20px; width:54px; height:20px; align:left; text-align:left;"> &nbsp; </div>
 		</div>
 
-		<div id="newgame" class="view" style="background:url('assets/img/mainDim_at_2x.png') no-repeat; background-size:100%;" ontouchmove="touchMove(event);">
+		<div id="newgame" class="view" style="background:url('assets/img/blank_at_2x.png') no-repeat; background-size:100%;" ontouchmove="touchMove(event);">
 			<br />
 			<img src="assets/img/imgNewGame_at_2x.png" style="align:center;" width="103" height="21" />
 			<br /><br />
@@ -161,7 +161,7 @@
 			<br /><br />
 			<div id="nostats" class="divStats">You need to play some games before stats can be shown!</div>
 			<div id="statsok" class="divStats">
-				<table border="0" cellpadding="2">
+				<table border="0" cellpadding="2" class="statsTable">
 					<tr>
 						<td>High Score:</td>
 						<td><input type="text" name="txtHighScore" value="" class="stats" readonly="readonly" disabled="true"></td>
@@ -195,7 +195,7 @@
 
 		<div id="help" class="view" style="background:url('assets/img/blank_at_2x.png') repeat-y; background-size:100%;">
 			<br />
-			<center><strong>How to use this app</strong></center>
+			<center><strong><font color="white">How to use this app</font></strong></center>
 			<br />
 			<div class="help">
 				On the 'New Game' screen, first choose the difficulty range you want to try for.  The difficulty levels are reflected in the scores you can achieve too, 
