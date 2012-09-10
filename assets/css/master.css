@@ -54,8 +54,8 @@ body {
 	color: #fff;
 	background:url('../img/blank_at_2x.png');
 	background-repeat: repeat-y;
-	background-size: 100%;
-	background-attachment: scroll;
+	/*background-size: 100%;
+	background-attachment: scroll;*/
 	/*padding: 10px;*/
 	/*position:relative;*/
 }
