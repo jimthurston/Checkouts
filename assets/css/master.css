@@ -52,7 +52,7 @@ body {
 	height: 460px;
 	width: 320px;
 	color: #fff;
-	background:url('../img/blank_at_2x.png');
+	background-image:url('../img/blank_at_2x.png');
 	background-repeat: repeat-y;
 	/*background-size: 100%;
 	background-attachment: scroll;*/
