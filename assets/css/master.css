@@ -1,6 +1,11 @@
 body {
+  /*
   background: #fff;
   background: -webkit-gradient(linear, 100% 0%, 0% 0%, from(#C8C8C8), color-stop(0.47, white), to(#C8C8C8));
+  */
+  background-image: url('../img/blank_at_2x.png');
+	background-repeat: repeat;
+	background-attachment: fixed;
   margin: 0;
   font: 18px Helvetica;
   text-align: center;
@@ -49,10 +54,8 @@ body {
 	    so we'll set the views to default to be un-displayed
 	    and then override this based on the element id */
 	display: none;
-	/*height: 460px;*/
-	height:100%;
-	/*width: 320px;*/
-	width:100%;
+	height: 460px;
+	width: 320px;
 	color: #fff;
 	background-image: url('../img/blank_at_2x.png');
 	background-repeat: repeat;
