@@ -3,12 +3,16 @@ body {
   background: #fff;
   background: -webkit-gradient(linear, 100% 0%, 0% 0%, from(#C8C8C8), color-stop(0.47, white), to(#C8C8C8));
   */
-  background-image: url('../img/blank_at_2x.png');
+  background: url('../img/blank_at_2x.png') repeat fixed 100%;
+  /*
 	background-repeat: repeat;
 	background-attachment: fixed;
+	background-size:100%;
+*/
   margin: 0;
   font: 18px Helvetica;
   text-align: center;
+  width: 320px;
 }
 
 #title_bar {
@@ -64,12 +68,13 @@ body {
 .help {
   text-align: left;
   font-size: 16px;
-  margin: 6px;
+  padding: 10px;
   color:#fff;
 }
 
 .divStats {
 	display: none;
+	padding: 10px;
 }
 
 .statsTable {
@@ -129,6 +134,7 @@ input {
 	margin: 0;
 	font: 18px Helvetica;
 	text-align: center;
+	color: #fff;
 }
 
 .difficulty {
