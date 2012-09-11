@@ -57,11 +57,6 @@ body {
 	height: 460px;
 	width: 320px;
 	color: #fff;
-	background-image: url('../img/blank_at_2x.png');
-	background-repeat: repeat;
-	background-attachment: fixed;
-	/*background-size: 100%;
-	*/
 	/*padding: 10px;*/
 	/*position:relative;*/
 }
