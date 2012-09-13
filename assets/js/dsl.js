@@ -242,7 +242,7 @@ var run = function(application) {
 			var sumRatings = 0;
 			allRatings.forEach(function(r){ sumRatings += r; });
 			var avgRating = sumRatings / allRatings.length;
-			x$('input[name=txtAverageRating]').attr('value', avgRating);
+			x$('input[name=txtAverageRating]').attr('value', Math.round(avgRating * 10)/10);
 			
 			// current rating - for this we look at all games played in the last 30 days.
 			var today = new Date();
@@ -259,7 +259,7 @@ var run = function(application) {
 					count++;
 				}
 				var curRating = monthSum / count;
-				x$('input[name=txtCurrentRating]').attr('value', curRating);
+				x$('input[name=txtCurrentRating]').attr('value', Math.round(curRating * 10)/10);
 			});
 		}
 		else
