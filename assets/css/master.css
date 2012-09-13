@@ -76,6 +76,19 @@ body {
 	text-align: right;
 }
 
+.slider
+{
+	-webkit-appearance: slider;
+	background-color: gray;
+}
+.slider::-webkit-slider-thumb
+{  
+    -webkit-appearance: none;  
+    background-color: #444;  
+    width: 15px;  
+    height: 20px;  
+} 
+
 /* our views */
 #welcome
 {
