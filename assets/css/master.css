@@ -4,11 +4,6 @@ body {
   background: -webkit-gradient(linear, 100% 0%, 0% 0%, from(#C8C8C8), color-stop(0.47, white), to(#C8C8C8));
   */
   background: url('../img/blank_at_2x.png') repeat fixed 100%;
-  /*
-	background-repeat: repeat;
-	background-attachment: fixed;
-	background-size:100%;
-*/
   margin: 0;
   font: 18px Helvetica;
   text-align: center;
@@ -127,13 +122,13 @@ input {
 }
 
 .stats {
-	width: 40px;
+	width: 80px;
 	height:18px;
 	border:0 none;
 	background: transparent;
 	margin: 0;
 	font: 18px Helvetica;
-	text-align: center;
+	text-align: left;
 	color: #fff;
 }
 
