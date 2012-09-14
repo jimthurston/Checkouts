@@ -20,11 +20,10 @@
   .jslider .jslider-pointer-hover { background-position: -20px -40px; }
   .jslider .jslider-pointer-to { left: 80%; }
 
-  .jslider .jslider-label { font-size: 14px; line-height: 20px; color: white; opacity: 0.4; white-space: nowrap; padding: 0px 2px; position: absolute; top: -18px; left: 0px; }
-/*  .jslider .jslider-label-to { left: auto; right: 0; }	*/
-  .jslider .jslider-label-to { left: 0; right: 0; }
+  .jslider .jslider-label { font-size: 9px; line-height: 12px; color: black; opacity: 0.4; white-space: nowrap; padding: 0px 2px; position: absolute; top: -18px; left: 0px; }
+  .jslider .jslider-label-to { left: auto; right: 0; }
 
-  .jslider .jslider-value { font-size: 18px; white-space: nowrap; padding: 1px 2px 0; position: absolute; top: -19px; left: 20%; background: transparent; color: White; line-height: 12px; -moz-border-radius: 2px; -webkit-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; }
+  .jslider .jslider-value { font-size: 9px; white-space: nowrap; padding: 1px 2px 0; position: absolute; top: -19px; left: 20%; background: white; line-height: 12px; -moz-border-radius: 2px; -webkit-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; }
   .jslider .jslider-value-to { left: 80%; }
 
   .jslider .jslider-label small,
@@ -32,7 +31,7 @@
 
   .jslider .jslider-scale { position: relative; top: 9px; }
   .jslider .jslider-scale span { position: absolute; height: 5px; border-left: 1px solid #999; font-size: 0; }
-  .jslider .jslider-scale ins { font-size: 14px; text-decoration: none; position: absolute; left: 0px; top: 5px; color: #fff; }
+  .jslider .jslider-scale ins { font-size: 9px; text-decoration: none; position: absolute; left: 0px; top: 5px; color: #999; }
 
   .jslider-single .jslider-pointer-to,
   .jslider-single .jslider-value-to,
