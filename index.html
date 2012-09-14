@@ -60,21 +60,21 @@
 					<input type="radio" name="minDifficulty" value="7">
 					<br />
 				
-				
 					<div class="layout-slider" style="width: 100%">
-					  Slider <span style="display: inline-block; width: 260px; padding: 0 5px;"><input id="Slider1" type="slider" name="difficulty" value="1;7" /></span> in string
+						<span style="display: inline-block; width: 260px; padding: 0 5px;"><input id="difficultySlider" type="slider" name="difficulty" value="1;7" /></span>
 					</div>
 					<script type="text/javascript" charset="utf-8">
-    					jQuery("#Slider1").slider({
+						jQuery("#difficultySlider").slider
+						({
     						from: 1,
     						to: 7,
     						step: 1,
     						dimension: '',
-    						skin: 'plastic',
-    						scale: ['1', '2', '3', '4', '5', '6', '7']
+    						skin: 'round',
+    						scale: ['1', '2', '3', '4', '5', '6', '7'],
+    						smooth: false
     					});
 					</script>
-
 
 					<br />
 					Max: 
@@ -86,11 +86,6 @@
 					<input type="radio" name="maxDifficulty" value="6">
 					<input type="radio" name="maxDifficulty" value="7" checked>
 				</fieldset>
-
-<div data-role="fieldcontain">
-   <label for="quantity">Number of Cones:</label>
-   <input type="range" name="quantity" id="quantity" value="5" min="1" max="10" />
-</div>
 
 				Choose game length
 				<fieldset>
