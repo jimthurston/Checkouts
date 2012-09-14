@@ -17,6 +17,17 @@
 		<script src="assets/js/dsl.js" type="text/javascript" charset="utf-8"></script>
 		<script src="assets/js/app.js" type="text/javascript" charset="utf-8"></script>
 		
+		<!-- JQuery Slider -->
+		<link rel="stylesheet" href="assets/js/jslider/css/jslider.css" type="text/css">
+		<link rel="stylesheet" href="assets/js/jslider/css/jslider.plastic.css" type="text/css">
+		<script type="text/javascript" src="assets/js/jslider/js/jquery-1.7.1.js"></script>
+		<script type="text/javascript" src="assets/js/jslider/js/jshashtable-2.1_src.js"></script>
+		<script type="text/javascript" src="assets/js/jslider/js/jquery.numberformatter-1.2.3.js"></script>
+		<script type="text/javascript" src="assets/js/jslider/js/tmpl.js"></script>
+		<script type="text/javascript" src="assets/js/jslider/js/jquery.dependClass-0.1.js"></script>
+		<script type="text/javascript" src="assets/js/jslider/js/draggable-0.1.js"></script>
+		<script type="text/javascript" src="assets/js/jslider/js/jquery.slider.js"></script>
+		
 		<script type="text/javascript">
 		touchMove = function(event) {
 		// Prevent scrolling on this element
@@ -48,7 +59,23 @@
 					<input type="radio" name="minDifficulty" value="6">
 					<input type="radio" name="minDifficulty" value="7">
 					<br />
-					<input type="text" class="slider" name="minDifficulty2" value="1" min="1" max="7" />
+				
+				
+					<div class="layout-slider" style="width: 100%">
+					  Slider <span style="display: inline-block; width: 400px; padding: 0 5px;"><input id="Slider1" type="slider" name="price" value="50" /></span> in string
+					</div>
+					<script type="text/javascript" charset="utf-8">
+    					jQuery("#Slider1").slider({
+    						from: 1,
+    						to: 7,
+    						step: 1,
+    						dimension: '',
+    						skin: 'plastic',
+    						scale: ['1', '2', '3', '4', '5', '6', '7']
+    					});
+					</script>
+
+
 					<br />
 					Max: 
 					<input type="radio" name="maxDifficulty" value="1">
