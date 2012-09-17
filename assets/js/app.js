@@ -2,86 +2,85 @@
 //  --- our app behavior logic ---
 //
 run(function() {
-    // immediately invoked on first run
-    var init = (function() {
-    })();
-    
-    // a little inline controller
-    when('#welcome');
-    when('#newgame');
+	// immediately invoked on first run
+	var init = (function() {
+	})();
+
+	// a little inline controller
+	when('#welcome');
+	when('#newgame');
 	when('#help');
 
-	when('#stats', function()
-	{
+	when('#stats', function() {
 		showStats();
 	});
 
-	when('#stats2', function()
-	{
+	when('#stats2', function() {
 		showStats();
 	});
 
-	when('#back', function()
-	{
+	when('#back', function() {
 		display('#welcome');
-    });
+	});
 
-	when('#statsok', function()
-	{
+	when('#statsok', function() {
 		display('#welcome');
-    });
+	});
 
-    when('#quit', function()
-	{
+	when('#quit', function() {
 		// resetting these stops the turns
 		x$('input[name=txtTurn]').attr('value', "");
 		x$('input[name=txtScore]').attr('value', "");
-        display('#welcome');
-    });
-	
-	when('#startgame', function()
-	{
+		display('#welcome');
+	});
+
+	when('#startgame', function() {
 		/*
 		// first check the difficulty levels are sensible
 		if (ui('minDifficulty') > ui('maxDifficulty'))
 		{
-			alert("Nonsense difficulty levels chosen!");
+		alert("Nonsense difficulty levels chosen!");
 		}
 		else
 		{
-			// save game configuration - this will then become the default
-			store.save({
-				key:'gameSettings',
-				minDifficulty:ui('minDifficulty'),
-				maxDifficulty:ui('maxDifficulty'),
-				gameLength:ui('gameLength')
-			});
+		// save game configuration - this will then become the default
+		store.save({
+		key:'gameSettings',
+		minDifficulty:ui('minDifficulty'),
+		maxDifficulty:ui('maxDifficulty'),
+		gameLength:ui('gameLength')
+		});
 			
-			gameTurn("new");
+		gameTurn("new");
 		}
 		*/
 
 		// save game configuration - this will then become the default
-		store.save({
+		var sliderValues = $('#difficulty').slider('value');
+		var minDifficulty = sliderValues[0];
+		var maxDifficulty = sliderValues[2];
+		var gameLength = $('#gameLength').slider('value');
+
+		store.save
+		({
 			key: 'gameSettings',
-			minDifficulty: ui('difficulty').slider("value", p1),
-			maxDifficulty: ui('difficulty').slider("value", p2),
-			gameLength: ui('gameLength')
+			minDifficulty: minDifficulty,
+			maxDifficulty: maxDifficulty,
+			gameLength: gameLength
 		});
+
+		gameTurn("new");
 	});
-	
-	when('#hit', function()
-	{
+
+	when('#hit', function() {
 		gameTurn("hit");
 	});
-	
-	when('#miss', function()
-	{
+
+	when('#miss', function() {
 		gameTurn("miss");
 	});
-	
-	when('#game2', function()
-	{
+
+	when('#game2', function() {
 		display('#newgame');
 	});
 });
