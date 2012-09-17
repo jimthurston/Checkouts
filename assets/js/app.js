@@ -41,6 +41,7 @@ run(function() {
 	
 	when('#startgame', function()
 	{
+		/*
 		// first check the difficulty levels are sensible
 		if (ui('minDifficulty') > ui('maxDifficulty'))
 		{
@@ -58,8 +59,16 @@ run(function() {
 			
 			gameTurn("new");
 		}
-	}
-	);
+		*/
+
+		// save game configuration - this will then become the default
+		store.save({
+			key: 'gameSettings',
+			minDifficulty: ui('difficulty').slider("value", p1),
+			maxDifficulty: ui('difficulty').slider("value", p2),
+			gameLength: ui('gameLength')
+		});
+	});
 	
 	when('#hit', function()
 	{

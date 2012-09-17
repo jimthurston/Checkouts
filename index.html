@@ -3,20 +3,19 @@
 	<head>
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
 		<title>Checkouts (alpha)</title>
+		
 		<link rel="stylesheet" href="assets/css/master.css" type="text/css" media="screen" />
 
-		<script src="phonegap.js" type="text/javascript" charset="utf-8"></script>
-		<script src="assets/js/xui.js" type="text/javascript" charset="utf-8"></script>
+<!--		<script src="phonegap.js" type="text/javascript" charset="utf-8"></script>	-->
+
+		<!-- Lawnchair plugin -->
+		<script src="assets/js/lawnchair/Lawnchair.js" type="text/javascript" charset="utf-8"></script>
 		<script src="assets/js/lawnchair/adaptors/LawnchairAdaptorHelpers.js" type="text/javascript" charset="utf-8"></script>
 		<script src="assets/js/lawnchair/adaptors/DOMStorageAdaptor.js" type="text/javascript" charset="utf-8"></script>
 		<script src="assets/js/lawnchair/adaptors/WebkitSQLiteAdaptor.js" type="text/javascript" charset="utf-8"></script>
 		<script src="assets/js/lawnchair/plugins/lawnchair-aggregation-0.6.1.js" type="text/javascript" charset="utf-8"></script>
 		<script src="assets/js/lawnchair/plugins/lawnchair-query-0.6.1.js" type="text/javascript" charset="utf-8"></script>
-		<script src="assets/js/lawnchair/Lawnchair.js" type="text/javascript" charset="utf-8"></script>
 
-		<script src="assets/js/dsl.js" type="text/javascript" charset="utf-8"></script>
-		<script src="assets/js/app.js" type="text/javascript" charset="utf-8"></script>
-		
 		<!-- JQuery Slider -->
 		<script type="text/javascript" src="assets/js/jslider/js/jquery-1.7.1.js"></script>
 		<script type="text/javascript" src="assets/js/jslider/js/jshashtable-2.1_src.js"></script>
@@ -27,7 +26,12 @@
 		<script type="text/javascript" src="assets/js/jslider/js/jquery.slider.js"></script>
 		<link rel="stylesheet" href="assets/js/jslider/css/jslider.css" type="text/css">
 		<link rel="stylesheet" href="assets/js/jslider/css/jslider.largeRound.css" type="text/css">
-	
+
+		<!-- Checkouts js -->
+		<script src="assets/js/xui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/js/dsl.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/js/app.js" type="text/javascript" charset="utf-8"></script>
+
 		<script type="text/javascript">
 		touchMove = function(event) {
 		// Prevent scrolling on this element
@@ -49,6 +53,8 @@
 			<br /><br />
 			<form id="newgame_form">
 				Choose difficulty range
+			
+			<!--
 				<fieldset>
 					Min: 
 					<input type="radio" name="minDifficulty" value="1" checked>
@@ -59,23 +65,23 @@
 					<input type="radio" name="minDifficulty" value="6">
 					<input type="radio" name="minDifficulty" value="7">
 					<br />
-				
-					<div class="layout-slider" style="width: 100%">
-						<span style="display: inline-block; width: 260px; padding: 0 5px;"><input id="difficultySlider" type="slider" name="difficulty" value="1;7" /></span>
-					</div>
-					<script type="text/javascript" charset="utf-8">
-						jQuery("#difficultySlider").slider
-						({
-    						from: 1,
-    						to: 7,
-    						step: 1,
-    						dimension: '',
-    						smooth: false,
-    						skin: "largeRound",
-    						scale: ['|','|','|','|','|','|','|']   						
-    					});
-					</script>
-
+			-->
+				<div class="layout-slider" style="width: 100%">
+					<span style="display: inline-block; width: 260px; padding: 0 5px;"><input id="difficulty" type="slider" name="difficulty" value="1;7" /></span>
+				</div>
+				<script type="text/javascript" charset="utf-8">
+					jQuery("#difficulty").slider
+					({
+						from: 1,
+						to: 7,
+						step: 1,
+						dimension: '',
+						smooth: false,
+						skin: "largeRound",
+						scale: ['|','|','|','|','|','|','|']   						
+					});
+				</script>
+			<!--
 					<br />
 					Max: 
 					<input type="radio" name="maxDifficulty" value="1">
@@ -86,8 +92,27 @@
 					<input type="radio" name="maxDifficulty" value="6">
 					<input type="radio" name="maxDifficulty" value="7" checked>
 				</fieldset>
-
+			-->
+			
 				Choose game length
+				
+				<div class="layout-slider" style="width: 100%">
+					<span style="display: inline-block; width: 260px; padding: 0 5px;"><input id="gameLength" type="slider" name="gameLength" value="20" /></span>
+				</div>
+				<script type="text/javascript" charset="utf-8">
+					jQuery("#gameLength").slider
+					({
+						from: 10,
+						to: 50,
+						step: 10,
+						dimension: '',
+						smooth: false,
+						skin: "largeRound",
+						scale: ['|', '|', '|', '|', '|']
+					});
+				</script>
+				
+				<!--
 				<fieldset>
 					<div align="center">
 						<table border="0" cellpadding="4" cellspacing="0">
@@ -108,6 +133,7 @@
 						</table>
 					</div>
 				</fieldset>
+				-->
 				
 				<center>
 					<div id="startgame_button" style="background:url('assets/img/btnStartGame_at_2x.png') no-repeat; background-size:100%; width:161px; height:24px;"> &nbsp; </div>
