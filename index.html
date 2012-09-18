@@ -95,8 +95,17 @@
 			</form>
 
 			<center>
-				<br /><br />
-				<div id="welcome_button" style="background:url('assets/img/btnBack_at_2x.png') no-repeat; background-size:100%; width:64px; height:24px;"> &nbsp; </div>
+				<br />
+				<table border="0" cellpadding="4" width="100%">
+					<tr>
+						<td width="50%" align="center">
+							<div id="welcome_button" style="background:url('assets/img/btnBack_at_2x.png') no-repeat; background-size:100%; width:64px; height:24px; align:left;"> &nbsp; </div>
+						</td>
+						<td width="50%" align="center">
+							<div id="help2_button" style="background:url('assets/img/btnHelp_at_2x.png') no-repeat; background-size:100%; width:60px; height:23px; font-size:20px; font-weight: bold; align:right;"> &nbsp; </div>
+						</td>
+					</tr>
+				</table>
 			</center>
 		</div>
 
@@ -104,10 +113,10 @@
 			<form id="game_form">
 				<table border="0" width="100%">
 					<tr>
-						<td align="left">
+						<td align="left" width="50%">
 							Turn <input type="text" name="txtTurn" class="stats" readonly="readonly">
 						</td>
-						<td align="right">
+						<td align="right" width="50%">
 							Score: <input type="text" name="txtScore" class="stats" readonly="readonly">
 						</td>
 					</tr>

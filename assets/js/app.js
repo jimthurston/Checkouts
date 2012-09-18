@@ -26,6 +26,10 @@ run(function() {
 	when('#statsok', function() {
 		display('#welcome');
 	});
+	
+	when('#help2', function() {
+		display('#help');
+	});
 
 	when('#quit', function() {
 		// resetting these stops the turns
