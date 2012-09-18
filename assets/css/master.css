@@ -105,27 +105,38 @@ input {
 }
 
 .Hit {
-	width: 100px;
-	background:#00aa00;
-	font-size: 20px;
+	background: url('../img/btnHit_at_2x.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 65px;
+	height: 33px;
 }
 
 .Miss {
-	width: 100px;
-	background:#cc0000;
-	font-size: 20px;
+	background: url('../img/btnMiss_at_2x.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 87px;
+	height: 33px;
+}
+
+.Quit {
+	background: url('../img/btnQuit_at_2x.png');
+	background-repeat: no-repeat;
+	width: 63px;
+	height: 24px;
+	background-size: 100%;
 }
 
 .target {
-	width: 60px;
-	height:30px;
-	font-size: 30px;
+	width: 100px;
+	height:60px;
+	font-size: 40px;
 	border:0 none;
 	text-align:center;
+	background: transparent;
 	margin: 0;
-	background: #fff;
-	background: -webkit-gradient(linear, 100% 0%, 0% 0%, from(#C8C8C8), color-stop(0.47, white), to(#C8C8C8));
-	color: #00c;
+	color: #fff;
 }
 
 .stats {
@@ -143,6 +154,7 @@ input {
 	width: 20px;
 	height: 20px;
 	font-size: 20px;
+	color: #fff;
 	border:0 none;
 	text-align:left;
 	background:transparent;

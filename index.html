@@ -55,18 +55,6 @@
 			<form id="newgame_form">
 				Choose difficulty range
 			
-			<!--
-				<fieldset>
-					Min: 
-					<input type="radio" name="minDifficulty" value="1" checked>
-					<input type="radio" name="minDifficulty" value="2">
-					<input type="radio" name="minDifficulty" value="3">
-					<input type="radio" name="minDifficulty" value="4">
-					<input type="radio" name="minDifficulty" value="5">
-					<input type="radio" name="minDifficulty" value="6">
-					<input type="radio" name="minDifficulty" value="7">
-					<br />
-			-->
 				<div class="layout-slider" style="width: 100%">
 					<span style="display: inline-block; width: 260px; padding: 0 5px;"><input id="difficulty" type="slider" name="difficulty" value="1;7" /></span>
 				</div>
@@ -82,19 +70,7 @@
 						scale: ['|','|','|','|','|','|','|']   						
 					});
 				</script>
-			<!--
-					<br />
-					Max: 
-					<input type="radio" name="maxDifficulty" value="1">
-					<input type="radio" name="maxDifficulty" value="2">
-					<input type="radio" name="maxDifficulty" value="3">
-					<input type="radio" name="maxDifficulty" value="4">
-					<input type="radio" name="maxDifficulty" value="5">
-					<input type="radio" name="maxDifficulty" value="6">
-					<input type="radio" name="maxDifficulty" value="7" checked>
-				</fieldset>
-			-->
-			
+
 				Choose game length
 				
 				<div class="layout-slider" style="width: 100%">
@@ -113,40 +89,15 @@
 					});
 				</script>
 				
-				<!--
-				<fieldset>
-					<div align="center">
-						<table border="0" cellpadding="4" cellspacing="0">
-							<tr>
-								<td><input type="radio" name="gameLength" value="10"></td>
-								<td><input type="radio" name="gameLength" value="20" checked></td>
-								<td><input type="radio" name="gameLength" value="30"></td>
-								<td><input type="radio" name="gameLength" value="40"></td>
-								<td><input type="radio" name="gameLength" value="50"></td>
-							</tr>
-							<tr>
-								<td>10</td>
-								<td>20</td>
-								<td>30</td>
-								<td>40</td>
-								<td>50</td>
-							</tr>
-						</table>
-					</div>
-				</fieldset>
-				-->
-				
 				<center>
 					<div id="startgame_button" style="background:url('assets/img/btnStartGame_at_2x.png') no-repeat; background-size:100%; width:161px; height:24px;"> &nbsp; </div>
 				</center>
-				<!--<button id="startgame_button">Start Game</button>-->
 			</form>
 
 			<center>
 				<br /><br />
 				<div id="welcome_button" style="background:url('assets/img/btnBack_at_2x.png') no-repeat; background-size:100%; width:64px; height:24px;"> &nbsp; </div>
 			</center>
-			<!--<div class="app_button" id="welcome_button">Back</div>-->
 		</div>
 
 		<div id="game" class="view">
@@ -166,32 +117,53 @@
 							<input type="text" name="txtTarget" value="" class="target" readonly="readonly">
 							<br /><br />
 							Difficulty: <input type="text" name="txtDifficulty" value="" class="difficulty" readonly="readonly">
+							<br /><br />
 						</td>
 					</tr>
 					<tr>
-						<td colspan="2">
-							<br />
-							<button id="hit_button" class="Hit">Hit!</button> &nbsp; &nbsp; <button id="miss_button" class="Miss">Miss</button>
+						<td align="center">
+							<div id="hit_button" class="Hit"> &nbsp; </div>
+						</td>
+						<td align="center">
+							<div id="miss_button" class="Miss"> &nbsp; </div>
 						</td>
 					</tr>
 					<tr>
-						<td colspan="2">
-							<br />
-							<button id="quit_button">Quit</button>
+						<td colspan="2" align="center">
+							<br /><br />
+							<div id="quit_button" class="Quit"> &nbsp; </div>
 						</td>
 					</tr>
 				</table>
 			</form>
 		</div>
 
-		<div id="gameOver" class="view" style="background:url('assets/img/mainDim_at_2x.png') no-repeat; background-size:100%;">
-			Game Over
+		<div id="gameOver" class="view">
+			<br />
+			<img src="assets/img/imgGameOver_at_2x.png" style="align:center;" width="172" height="30" />
 			<br /><br />
-			You scored <input type="text" name="txtFinalScore" value="" class="stats" readonly="readonly" disabled="true"> in 
-			<input type="text" name="txtFinalGameLength" value="" class="stats" readonly="readonly" disabled="true"> turns, giving you a checkout rating of 
-			<input type="text" name="txtFinalRating" value="" class="stats" readonly="readonly" disabled="true">.
-			<br /><br />
-			<button id="stats2_button">View Stats</button> &nbsp; &nbsp; <button id="game2_button">Play Again</button>
+			<table border="0" cellpadding="5">
+				<tr>
+					<td align="right">Your score:</td>
+					<td align="left"><input type="text" name="txtFinalScore" value="" class="stats" readonly="readonly"></td>
+				</tr>
+				<tr>
+					<td align="right">Turns:</td>
+					<td align="left"><input type="text" name="txtFinalGameLength" value="" class="stats" readonly="readonly"></td>
+				</tr>
+				<tr>
+					<td align="right">Checkout Rating:</td>
+					<td align="left"><input type="text" name="txtFinalRating" value="" class="stats" readonly="readonly"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><br /><br /></td>
+				</tr>
+				<tr>
+					<td align="center"><div id="stats2_button" style="background:url('assets/img/btnViewStats_at_2x.png') no-repeat; background-size:100%; width:123px; height:21px;"> &nbsp; </div></td>
+					<td align="center"><div id="game2_button" style="background:url('assets/img/btnPlayAgain_at_2x.png') no-repeat; background-size:100%; width:125px; height:21px;"> &nbsp; </div></td>
+				</tr>
+			</table>
+			<!--<button id="stats2_button">View Stats</button> &nbsp; &nbsp; <button id="game2_button">Play Again</button>-->
 		</div>
 		
 		<div id="stats" class="view" ontouchmove="touchMove(event);">
@@ -229,7 +201,6 @@
 			</center>
 			<br /><br />
 
-			<!--<button id="statsok_button">OK</button>-->
 		</div>
 
 		<div id="help" class="view">
