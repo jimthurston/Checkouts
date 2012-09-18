@@ -33,9 +33,10 @@
 		<script src="assets/js/app.js" type="text/javascript" charset="utf-8"></script>
 
 		<script type="text/javascript">
-		touchMove = function(event) {
-		// Prevent scrolling on this element
-		event.preventDefault();
+		touchMove = function(event)
+		{
+			// Prevent scrolling on this element
+			event.preventDefault();
 		}
 		</script>
 	</head>
@@ -148,23 +149,23 @@
 			<!--<div class="app_button" id="welcome_button">Back</div>-->
 		</div>
 
-		<div id="game" class="view" style="background:url('assets/img/mainDim_at_2x.png') no-repeat; background-size:100%;">
+		<div id="game" class="view">
 			<form id="game_form">
-				<table border="0">
+				<table border="0" width="100%">
 					<tr>
 						<td align="left">
-							Turn <input type="text" name="txtTurn" class="stats" readonly="readonly" disabled="true">
+							Turn <input type="text" name="txtTurn" class="stats" readonly="readonly">
 						</td>
 						<td align="right">
-							Score: <input type="text" name="txtScore" class="stats" readonly="readonly" disabled="true">
+							Score: <input type="text" name="txtScore" class="stats" readonly="readonly">
 						</td>
 					</tr>
 					<tr>
 						<td colspan="2">
 							<br />
-							<input type="text" name="txtTarget" value="" class="target" readonly="readonly" disabled="true">
+							<input type="text" name="txtTarget" value="" class="target" readonly="readonly">
 							<br /><br />
-							Difficulty: <input type="text" name="txtDifficulty" value="" class="difficulty" readonly="readonly" disabled="true">
+							Difficulty: <input type="text" name="txtDifficulty" value="" class="difficulty" readonly="readonly">
 						</td>
 					</tr>
 					<tr>
