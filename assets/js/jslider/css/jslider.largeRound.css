@@ -2,4 +2,5 @@
 .jslider_largeRound .jslider-pointer { background-image: url(../img/jslider.largeRound.png); background-position: 0 -40px; }
 .jslider_largeRound .jslider-pointer { width: 34px; height: 34px; top: -12px; margin-left: -15px; }
 .jslider_largeRound .jslider-pointer-hover { background-position: -40px -40px; }
-.jslider .jslider-value { font-size: 16px; background: transparent; color: white; top: -24px; -webkit-border-radius: 0px; -o-border-radius: 0px; border-radius: 0px; }
+.jslider_largeRound .jslider-value { font-size: 0px; background: transparent; color: black; top: -24px; -webkit-border-radius: 0px; -o-border-radius: 0px; border-radius: 0px; }
+.jslider_largeRound .jslider-scale ins { font-size: 14px; text-decoration: none; position: absolute; left: -6px; top: 5px; color: #999; }
