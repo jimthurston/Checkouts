@@ -129,9 +129,9 @@ input {
 }
 
 .target {
-	width: 100px;
-	height:60px;
-	font-size: 48px;
+	width: 160px;
+	height:80px;
+	font-size: 60px;
 	border:0 none;
 	text-align:center;
 	background: transparent;
