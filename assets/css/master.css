@@ -137,7 +137,7 @@ input {
 	background: transparent;
 	margin: 0;
 	color: #fff;
-	text-shadow: 0 0 10px #fff;
+	text-shadow: 0 0 25px #fff;
 }
 
 .stats {
@@ -153,11 +153,12 @@ input {
 
 .difficulty {
 	width: 140px;
-	height: 10px;
+	height: 20px;
 	//font-size: 20px;
 	color: #fff;
 	border:0 none;
-	text-align:left;
+	text-align:center;
+	align:center;
 	//background:transparent;
 	background: url('../img/bull.png');
 	background-repeat: repeat;
