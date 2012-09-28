@@ -1,7 +1,10 @@
 // 
 //  --- our app behavior logic ---
 //
-run(function() {
+run
+(
+function()
+{
 	// immediately invoked on first run
 	var init = (function() {
 	})();
