@@ -131,12 +131,13 @@ input {
 .target {
 	width: 100px;
 	height:60px;
-	font-size: 40px;
+	font-size: 48px;
 	border:0 none;
 	text-align:center;
 	background: transparent;
 	margin: 0;
 	color: #fff;
+	text-shadow: 0 0 10px #fff;
 }
 
 .stats {
