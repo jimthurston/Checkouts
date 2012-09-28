@@ -152,11 +152,13 @@ input {
 }
 
 .difficulty {
-	width: 20px;
-	height: 20px;
-	font-size: 20px;
+	width: 140px;
+	height: 10px;
+	//font-size: 20px;
 	color: #fff;
 	border:0 none;
 	text-align:left;
-	background:transparent;
+	//background:transparent;
+	background: url('../img/bull.png');
+	background-repeat: repeat;
 }
