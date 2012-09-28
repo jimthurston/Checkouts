@@ -165,10 +165,10 @@ var run = function(application)
 			
 			x$('input[name=txtDifficulty]').attr('value',difficulty);
 			var newWidth = difficulty * 20;
-			alert(newWidth);
 			var dWidth = x$('div[name=difficulty]').width();
+			var dWidth = $("#difficulty").width();
 			alert(dWidth);
-			x$('div[name=difficulty]').width(newWidth);
+			$("#difficulty").width(newWidth);
 		}
 		else
 		{
