@@ -165,7 +165,7 @@ var run = function(application)
 			
 			x$('input[name=txtDifficulty]').attr('value',difficulty);
 			var newWidth = difficulty * 20;
-			var dWidth = x$('div[name=difficulty]').width();
+			//var dWidth = x$('div[name=difficulty]').width();
 			var dWidth = $("#difficulty").width();
 			alert(dWidth);
 			$("#difficulty").width(newWidth);
