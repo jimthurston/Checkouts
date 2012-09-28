@@ -164,9 +164,11 @@ var run = function(application)
 				alert("Error getting difficulty from target.");
 			
 			x$('input[name=txtDifficulty]').attr('value',difficulty);
-			alert(x$('div[name=difficulty]').width());
-			alert(x$('div[id=difficulty]').width());
-			x$('div[name=difficulty]').width(difficulty * 20);
+			var newWidth = difficulty * 20;
+			alert(newWidth);
+			var dWidth = x$('div[name=difficulty]').width();
+			alert(dWidth);
+			x$('div[name=difficulty]').width(newWidth);
 		}
 		else
 		{
