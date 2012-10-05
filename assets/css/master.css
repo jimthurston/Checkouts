@@ -159,6 +159,6 @@ input {
 	text-align:center;
 	align:center;
 	//background:transparent;
-	background: url('../img/bull_at_2x.png');
-	background-repeat: repeat;
+	background: url('../img/bull_at_2x.png') repeat fixed 100%;
+	//background-repeat: repeat;
 }
